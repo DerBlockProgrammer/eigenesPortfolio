@@ -1,0 +1,26 @@
+<section id="portfolio"  class="portfolio-section">
+
+    <div class="portfolio-header">
+      <h2>Portfolio</h2>
+      <p>
+        Explore a selection of my work here – interact with projects to see my skills in action.
+      </p>
+    </div>
+  
+    
+    <div class="portfolio-grid">
+      <div class="portfolio-card" *ngFor="let card of portfolioCards">
+        <img [src]="card.image" [alt]="card.title" />
+        <div class="portfolio-details">
+          <h3>{{ card.title }}</h3>
+          <p class="technologies">{{ card.technologies }}</p>
+          <p class="description">{{ card.description }}</p>
+          <div class="buttons">
+            <a [href]="card.liveLink" class="btn live-test" target="_blank">Live test</a>
+            <a [href]="card.githubLink" class="btn github" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

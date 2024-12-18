@@ -1,0 +1,113 @@
+/* Grundlegendes Styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #141D2F;
+  color: white;
+}
+
+/* Header-Styling */
+.header {
+  position: sticky; // Sticky Positionierung
+  top: 0; // Fixiert den Header oben am Bildschirm
+  z-index: 10000; // Header bleibt vor anderen Elementen sichtbar
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #141D2F;
+
+  /* Logo */
+  /* Logo Styling */
+  .logo img {
+    height: 87px;
+    ;
+    /* Höhe des Logos anpassen */
+    width: auto;
+    /* Breite automatisch berechnen */
+    object-fit: contain;
+    /* Verhindert Verzerrungen */
+  }
+
+
+  /* Navbar für größere Bildschirme */
+  #navbar {
+    display: flex;
+    gap: 20px;
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #70e61c;
+      }
+    }
+  }
+
+  /* Hamburger-Menü */
+  .menu-icon {
+    display: none; // Standardmäßig ausgeblendet
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+
+    .line {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+    }
+  }
+
+  /* Dropdown-Menü */
+  .mobile-menu {
+    display: none;
+    /* Standardmäßig versteckt */
+    background-color: #141D2F;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 10000;
+    /* Menü vor andere Elemente setzen */
+
+    a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+
+      &:hover {
+        color: #70e61c;
+      }
+    }
+
+    &.show {
+      display: block;
+      /* Dropdown-Menü anzeigen */
+    }
+  }
+
+}
+
+/* Responsives Styling */
+@media (max-width: 404px) {
+  .header {
+    #navbar {
+      display: none; // Hauptnavigation ausblenden
+    }
+
+    .menu-icon {
+      display: flex; // Hamburger-Icon anzeigen
+    }
+
+    .logo img {
+      height: 51px;
+      /* Kleinere Logo-Größe für mobile Bildschirme */
+    }
+  }
+}

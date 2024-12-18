@@ -1,0 +1,603 @@
+section {
+    position: relative;
+    // background-color: #141D2F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 202px);
+    overflow: hidden;
+    z-index: 1;
+
+    .background-green {
+        position: absolute;
+        left: 52px;
+        width: 57%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -10;
+        >img{
+            height: 80vh;
+            
+        }
+    }
+    .hero{
+        display: none;
+    }
+
+    .content-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1200px;
+        height: 100%;
+        padding: 0 40px;
+    }
+
+    .photo {
+        background-image: url("../../../../public/background/photoshadows.png");
+        flex: 1;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 30;
+        background-size: cover;
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+   
+    .text-wrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        z-index: 100;
+
+        .iam-and-name {
+            display: flex;
+            align-items: flex-start; 
+            height: 200px;
+            
+            .iam {
+                transform: rotate(-90deg); 
+                font-size: 35px;
+                color: white;
+                line-height: 1; 
+                margin-top: 49px;
+
+                h2 {
+                    font-weight: 400;
+                    text-align: right;
+                    margin: 0;
+                }
+            }
+
+            .name {
+                .all {
+                    display: flex;
+                    flex-direction: column;
+
+                    .green {
+                        color: white;
+                        font-size: 54px;
+                        font-weight: 700;
+                    }
+
+                    .lila {
+                        color: #9747FF;
+                        font-size: 45px;
+
+                        > p {
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+
+        .buttonDiv {
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            button {
+                background-color: #70e61c;
+                color: white;
+                font-size: 23px;
+                font-weight: 600;
+                padding: 12px 30px;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            button:hover {
+                background-color: #9747FF;
+                box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+                transform: translateY(-2px);
+            }
+
+            button:active {
+                transform: translateY(2px);
+                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}
+
+@media (max-width: 1203px) {
+    section {
+        position: relative;
+        // background-color: #141D2F;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 202px);
+        overflow: hidden;
+        z-index: 1;
+    
+        .background-green {
+            position: absolute;
+            left: 52px;
+            width: 57%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -10;
+            >img{
+                height: 80vh;
+                
+            }
+        }
+        .hero{
+            display: none;
+        }
+    
+        .content-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            height: 100%;
+            padding: 0 40px;
+        }
+    
+        .photo {
+            background-image: url("../../../../public/background/photoshadows.png");
+            flex: 1;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 30;
+            background-size: cover;
+    
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+       
+        .text-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            position: relative;
+            z-index: 100;
+    
+            .iam-and-name {
+                display: flex;
+                align-items: flex-start; 
+                height: 200px;
+                
+                .iam {
+                    transform: rotate(-90deg); 
+                    font-size: 26px;
+                    color: white;
+                    line-height: 1; 
+                    margin-top: 36px;
+    
+                    h2 {
+                        font-weight: 400;
+                        text-align: right;
+                        margin: 0;
+                    }
+                }
+    
+                .name {
+                    .all {
+                        display: flex;
+                        flex-direction: column;
+    
+                        .green {
+                            color: white;
+                            font-size: 38px;
+                            font-weight: 700;
+                        }
+    
+                        .lila {
+                            color: #9747FF;
+                            font-size: 34px;
+    
+                            > p {
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .buttonDiv {
+                margin-top: 20px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+    
+                button {
+                    background-color: #70e61c;
+                    color: white;
+                    font-size: 23px;
+                    font-weight: 600;
+                    padding: 12px 30px;
+                    border: none;
+                    border-radius: 15px;
+                    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                }
+    
+                button:hover {
+                    background-color: #9747FF;
+                    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+                    transform: translateY(-2px);
+                }
+    
+                button:active {
+                    transform: translateY(2px);
+                    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 965px) {
+    section {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: auto;
+        padding: 20px;
+
+        .content-wrapper {
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+        }
+
+        .photo {
+            width: 100vw;
+            height: auto;
+            display: flex;
+            justify-content: center;
+
+            img {
+                // width: 100vw;
+              
+            }
+        }
+
+        .text-wrapper {
+            width: 100vw;
+            align-items: center;
+            text-align: start;
+            margin-top: -102px;
+
+            .iam-and-name {
+                flex-direction: row;
+                align-items: center;
+                gap: 0px;
+                width: 229px;
+                white-space: nowrap;
+
+                .iam {
+                    transform: none;
+                    font-size: 18px; 
+                    text-align: start;
+                    transform: rotate(-90deg);
+                    width: 177px;
+                    height: 0px;
+                }
+
+                .name .all {
+                    .green {
+                        font-size: 24px; 
+                        margin-top: 29px;
+                    }
+
+                    .lila {
+                        font-size: 20px; 
+                    }
+                }
+            }
+
+            .buttonDiv {
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+
+                button {
+                    font-size: 18px;
+                    padding: 10px 20px;
+                }
+            }
+        }
+       
+    }
+}
+
+
+@media (max-width: 790px){
+
+    section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: auto;
+        padding: 20px;
+    }
+
+    .content-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    .background-green {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1; /* Hintergrund unter allen anderen */
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .titelbackground {
+        position: absolute;
+        top: 50%; /* Platziere das Shape */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2; /* Shape zwischen dem Background und dem Bild Sergej */
+        width: 80%;
+        height: auto;
+        background-image: url("./../../../../public/HeroBackground.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        pointer-events: none;
+    }
+
+    .photo {
+        position: relative;
+        z-index: 3; /* Bild hinter dem Shape */
+        width: 80%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .photo img {
+        width: 100%; /* Passt das Bild an die Breite an */
+        height: auto; /* Hält das Seitenverhältnis */
+        z-index: 3; /* Hinter dem Shape */
+    }
+
+    .text-wrapper {
+        position: absolute; /* Text auf dem Shape platzieren */
+        z-index: 4; /* Text über dem Shape */
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: start;
+        color: white;
+        background-image: url("./../../../../public/HeroBackground.png");
+        background-size: cover;
+        background-position: 0 -23px;
+     
+    }
+
+    .text-wrapper .iam-and-name {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+
+        .iam {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .name .all {
+            .green {
+                font-size: 24px;
+            }
+
+            .lila {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .buttonDiv {
+        margin-top: 20px;
+    }
+
+    .hero{
+        display: block;
+        height: 77px;
+        width: 100vw;
+        margin-top: -60px;
+        z-index: 2334;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 404px) {
+    section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: auto;
+        padding: 20px;
+    }
+
+    .content-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    .background-green {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1; /* Hintergrund unter allen anderen */
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .titelbackground {
+        position: absolute;
+        top: 50%; /* Platziere das Shape */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2; /* Shape zwischen dem Background und dem Bild Sergej */
+        width: 80%;
+        height: auto;
+        background-image: url("./../../../../public/HeroBackground.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        pointer-events: none;
+    }
+
+    .photo {
+        position: relative;
+        z-index: 3; /* Bild hinter dem Shape */
+        width: 80%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .photo img {
+        width: 100%; /* Passt das Bild an die Breite an */
+        height: auto; /* Hält das Seitenverhältnis */
+        z-index: 3; /* Hinter dem Shape */
+    }
+
+    .text-wrapper {
+        position: absolute; /* Text auf dem Shape platzieren */
+        z-index: 4; /* Text über dem Shape */
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: start;
+        color: white;
+        background-image: url("./../../../../public/HeroBackground.png");
+        background-size: cover;
+        background-position: 0 -23px;
+    }
+
+    .text-wrapper .iam-and-name {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+
+        .iam {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .name .all {
+            .green {
+                font-size: 24px;
+            }
+
+            .lila {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .buttonDiv {
+        margin-top: 20px;
+    }
+
+    .hero{
+        display: block;
+        height: 77px;
+        width: 100vw;
+        margin-top: -60px;
+        z-index: 2334;
+    }
+}
+
+

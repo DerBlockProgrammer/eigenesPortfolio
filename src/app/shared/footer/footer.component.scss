@@ -1,0 +1,198 @@
+.footer {
+    background-color: #141d2f;
+    color: white;
+    padding: 40px 50px;
+    display: flex;
+    justify-content: center;
+    height: 123px;
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        width: 100%;
+
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+
+            h1 {
+                font-size: 24px;
+                font-weight: bold;
+
+                span {
+                    color: #7dff63; // Grüne Farbe für "K"
+                }
+            }
+
+            p {
+                margin: 5px 0 0;
+                font-size: 12px;
+                color: #b6b6b6;
+            }
+        }
+
+        .footer-copyright {
+            font-size: 14px;
+            text-align: center;
+            color: #b6b6b6;
+        }
+
+        .footer-icons {
+            display: flex;
+            gap: 37px;
+            padding-right: 35px;
+
+            a {
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+
+                img {
+                    width: 30px;
+                    height: auto;
+                
+                    transition: transform 0.3s ease;
+
+                    &:hover {
+                        transform: scale(1.2); // Vergrößerung bei Hover
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 504px) {
+    .footer {
+        background-color: #141d2f;
+        color: white;
+        padding: 40px 50px;
+        display: flex;
+        justify-content: center;
+        height: 123px;
+    
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            width: 100%;
+    
+            .footer-logo {
+                display: flex;
+                flex-direction: column;
+    
+                h1 {
+                    font-size: 24px;
+                    font-weight: bold;
+    
+                    span {
+                        color: #7dff63; // Grüne Farbe für "K"
+                    }
+                }
+    
+                p {
+                    margin: 5px 0 0;
+                    font-size: 12px;
+                    color: #b6b6b6;
+                }
+            }
+    
+            .footer-copyright {
+                font-size: 14px;
+                text-align: center;
+                color: #b6b6b6;
+            }
+    
+            .footer-icons {
+                display: flex;
+                gap: 15px;
+                padding-right: 0px;
+    
+                a {
+                    display: inline-block;
+                    width: 24px;
+                    height: 24px;
+    
+                    img {
+                        width: 100%;
+                        height: auto;
+                        filter: invert(100%); 
+                        transition: transform 0.3s ease;
+    
+                        &:hover {
+                            transform: scale(1.2); 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 404px) {
+    .footer {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+
+        .footer-content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            .footer-logo {
+                margin-bottom: 20px;
+
+                h1 {
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 12px;
+                }
+            }
+
+            .footer-copyright {
+                margin-bottom: 15px;
+                font-size: 12px;
+            }
+
+            .footer-icons {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                padding: 0;
+
+                a {
+                    display: inline-block;
+                    width: 24px;
+                    height: 24px;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        filter: invert(100%);
+                        transition: transform 0.3s ease;
+
+                        &:hover {
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+
+            .footer-legal {
+                margin-top: 20px;
+                font-size: 12px;
+                color: #b6b6b6;
+            }
+        }
+    }
+}

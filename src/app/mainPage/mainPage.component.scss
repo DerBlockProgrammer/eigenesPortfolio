@@ -1,0 +1,38 @@
+.shape{
+    margin-top: -188px;
+    width: 100%;
+    z-index: 2000;
+    position: absolute;
+    height: 253px
+
+}
+.test{
+    position: relative;
+    z-index: 1000;
+}
+
+
+
+@media(max-width: 790px){
+    .shape{
+        display: none;
+        margin-top: -404px;
+        width: 100%;
+        z-index: 5000;
+        position: absolute;
+        height: 253px
+    
+    }
+}
+
+@media(max-width: 404px){
+    .shape{
+        display: none;
+        margin-top: -404px;
+        width: 100%;
+        z-index: 5000;
+        position: absolute;
+        height: 253px
+    
+    }
+}
