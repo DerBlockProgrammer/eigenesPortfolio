@@ -85,9 +85,10 @@
                             background-color: #9747FF;
                             color: white;
                         }
+
                         &.live-test:hover {
                             background-color: #00FF00;
-                           
+
                         }
 
                         &.github {
@@ -97,7 +98,7 @@
 
                         &:hover {
                             filter: brightness(0.9);
-                           
+
                         }
                     }
                 }
@@ -116,12 +117,13 @@
         }
     }
 
-   
+
 }
-@media(max-width: 1022px) {
+
+@media (max-width: 1024px) {
     .portfolio-section {
         background-color: #141D2F;
-        padding: 50px 101px;
+        padding: 50px 20px; // Kleinere Padding für kleinere Bildschirme
         color: white;
         display: flex;
         flex-direction: column;
@@ -129,50 +131,51 @@
 
         .portfolio-header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
+            margin-top: 50px;
 
             h2 {
-                font-size: 90px;
+                font-size: 60px; // Kleinere Überschrift
                 font-weight: bold;
                 margin-bottom: 10px;
-                margin-top: 101px;
             }
 
             p {
-                font-size: 15px;
-                line-height: 1.8;
+                font-size: 14px;
+                line-height: 1.6;
                 color: #cfd1d4;
             }
         }
 
         .portfolio-grid {
             display: flex;
-            flex-direction: column;
+            flex-direction: column; // Stellt sicher, dass alles untereinander liegt
             gap: 30px;
-            width: 102vh;
-
+            width: 100%; // Die volle Breite des Containers nutzen
 
             .portfolio-card {
                 display: flex;
-                align-items: flex-start;
-                gap: 35px;
+                flex-direction: column; // Karteninhalte werden vertikal angeordnet
+                align-items: center;
+                gap: 20px;
                 background-color: transparent;
                 padding: 20px;
-                margin-top: 69px;
+                margin-top: 20px;
 
                 img {
-                    width: 500px;
+                    width: 100%; // Bilder nehmen die volle Breite ein
+                    max-width: 400px; // Maximale Größe für bessere Anpassung
                     height: auto;
                     border-radius: 5px;
                 }
 
                 .portfolio-details {
+                    text-align: center; // Zentriert den Inhalt
                     display: flex;
                     flex-direction: column;
 
                     h3 {
-                        font-size: 20px;
-                        font-weight: bold;
+                        font-size: 18px;
                         color: #9747FF;
                         margin-bottom: 10px;
                     }
@@ -185,15 +188,15 @@
 
                     .description {
                         font-size: 12px;
-                        line-height: 1.5;
                         color: #cfd1d4;
+                        line-height: 1.5;
                         margin-bottom: 20px;
                     }
 
                     .buttons {
                         display: flex;
-                        gap: 67px;
-
+                        flex-direction: column; // Buttons untereinander anordnen
+                        gap: 15px;
 
                         .btn {
                             text-decoration: none;
@@ -210,6 +213,7 @@
                             &.github {
                                 background-color: transparent;
                                 color: #00FF00;
+                                border: 1px solid #00FF00;
                             }
 
                             &:hover {
@@ -220,139 +224,298 @@
                 }
             }
 
-
             .portfolio-card:nth-child(2) {
-                flex-direction: row-reverse;
-                text-align: right;
-
-                img {
-                    margin-right: 0;
-                    margin-left: 20px;
-                }
-            }
-        }
-
-
-    }
-
-@media(max-width:798px){
-    .portfolio-section {
-        padding: 20px;
-        text-align: center;
-
-        .portfolio-header {
-            
-            h2 {
-                position: relative;
-                display: inline-block;
-                font-size: 45px;
-                margin: 20px 0;
-
-                &::before,
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: 50%;
-                    width: 50px; /* Länge der Linien */
-                    height: 2px; /* Dicke der Linien */
-                    background-color: #9747FF; /* Lila Farbe */
-                }
-    
-                &::before {
-                    left: -60px; /* Position links */
-                    transform: translateY(-50%);
-                }
-    
-                &::after {
-                    right: -60px; /* Position rechts */
-                    transform: translateY(-50%);
-                }
-            }
-
-            p {
-                font-size: 16px;
-                margin-bottom: -100px;
-            }
-        }
-
-
-        .portfolio-grid {
-            display: flex;
-            flex-direction: column; /* Vertikale Anordnung */
-            gap: 40px; /* Mehr Abstand zwischen Karten */
-            width: 100%; /* Passt sich der Bildschirmbreite an */
-
-            .portfolio-card {
-                display: flex;
-                flex-direction: column; /* Bild und Details untereinander */
-                align-items: center;
-                text-align: center;
-                gap: 20px; /* Abstand zwischen Bild und Text */
-                padding: 15px;
-                
-
-                img {
-                    width: 90%; /* Bild passt in den Bildschirm */
-                    max-width: 300px; /* Maximale Breite des Bildes */
-                    height: auto;
-                    margin: 0 auto; /* Zentriert */
-                }
-
-                .portfolio-details {
-                    h3 {
-                        font-size: 18px; /* Angepasste Überschrift */
-                        margin-bottom: 10px;
-                    }
-
-                    .technologies {
-                        font-size: 14px; /* Kleinere Technologie-Beschreibung */
-                        color: #00FF00;
-                        margin-bottom: 10px;
-                    }
-
-                    .description {
-                        font-size: 12px;
-                        margin-bottom: 15px;
-                    }
-
-                    .buttons {
-                        display: flex;
-                        // flex-direction: column; /* Buttons untereinander */
-                        // gap: 10px; /* Abstand zwischen Buttons */
-
-                        .btn {
-                            font-size: 14px;
-                            padding: 10px 20px;
-                            width: 100%; /* Buttons nehmen die volle Breite ein */
-                            max-width: 200px; /* Maximale Breite der Buttons */
-                            margin: 0 auto; /* Zentrierung */
-
-                            &.live-test {
-                                background-color: #9747FF;
-                                color: white;
-                            }
-
-                            &.github {
-                                background-color: transparent;
-                                color: #00FF00;
-                                border: 1px solid #00FF00; /* Umrahmung für Github */
-                            }
-                        }
-                    }
-                }
-            }
-
-            .portfolio-card:nth-child(2) {
-                flex-direction: column; /* Bild und Details vertikal */
+                flex-direction: column; // Zweite Karte wird ebenfalls vertikal ausgerichtet
                 text-align: center;
 
                 img {
-                    margin: 0 auto; /* Zentriert */
+                    margin: 0; // Margin entfernen
                 }
             }
         }
     }
 }
+
+    @media(max-width:900px) {
+        .portfolio-section {
+            padding: 20px;
+            text-align: center;
+
+            .portfolio-header {
+
+                h2 {
+                    position: relative;
+                    display: inline-block;
+                    font-size: 45px;
+                    margin: 20px 0;
+
+                    &::before,
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        width: 50px;
+                        /* Länge der Linien */
+                        height: 2px;
+                        /* Dicke der Linien */
+                        background-color: #9747FF;
+                        /* Lila Farbe */
+                    }
+
+                    &::before {
+                        left: -60px;
+                        /* Position links */
+                        transform: translateY(-50%);
+                    }
+
+                    &::after {
+                        right: -60px;
+                        /* Position rechts */
+                        transform: translateY(-50%);
+                    }
+                }
+
+                p {
+                    font-size: 16px;
+                    margin-bottom: -100px;
+                }
+            }
+
+
+            .portfolio-grid {
+                display: flex;
+                flex-direction: column;
+                /* Vertikale Anordnung */
+                gap: 40px;
+                /* Mehr Abstand zwischen Karten */
+                width: 100%;
+                /* Passt sich der Bildschirmbreite an */
+
+                .portfolio-card {
+                    display: flex;
+                    flex-direction: column;
+                    /* Bild und Details untereinander */
+                    align-items: center;
+                    text-align: center;
+                    gap: 20px;
+                    /* Abstand zwischen Bild und Text */
+                    padding: 15px;
+
+
+                    img {
+                        width: 90%;
+                        /* Bild passt in den Bildschirm */
+                        max-width: 300px;
+                        /* Maximale Breite des Bildes */
+                        height: auto;
+                        margin: 0 auto;
+                        /* Zentriert */
+                    }
+
+                    .portfolio-details {
+                        h3 {
+                            font-size: 18px;
+                            /* Angepasste Überschrift */
+                            margin-bottom: 10px;
+                        }
+
+                        .technologies {
+                            font-size: 14px;
+                            /* Kleinere Technologie-Beschreibung */
+                            color: #00FF00;
+                            margin-bottom: 10px;
+                        }
+
+                        .description {
+                            font-size: 12px;
+                            margin-bottom: 15px;
+                        }
+
+                        .buttons {
+                            display: flex;
+                            // flex-direction: column; /* Buttons untereinander */
+                            // gap: 10px; /* Abstand zwischen Buttons */
+
+                            .btn {
+                                font-size: 14px;
+                                padding: 10px 20px;
+                                width: 100%;
+                                /* Buttons nehmen die volle Breite ein */
+                                max-width: 200px;
+                                /* Maximale Breite der Buttons */
+                                margin: 0 auto;
+                                /* Zentrierung */
+
+                                &.live-test {
+                                    background-color: #9747FF;
+                                    color: white;
+                                }
+
+                                &.github {
+                                    background-color: transparent;
+                                    color: #00FF00;
+                                    border: 1px solid #00FF00;
+                                    /* Umrahmung für Github */
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .portfolio-card:nth-child(2) {
+                    flex-direction: column;
+                    /* Bild und Details vertikal */
+                    text-align: center;
+
+                    img {
+                        margin: 0 auto;
+                        /* Zentriert */
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media(max-width:798px) {
+        .portfolio-section {
+            padding: 20px;
+            text-align: center;
+
+            .portfolio-header {
+
+                h2 {
+                    position: relative;
+                    display: inline-block;
+                    font-size: 45px;
+                    margin: 20px 0;
+
+                    &::before,
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        width: 50px;
+                        /* Länge der Linien */
+                        height: 2px;
+                        /* Dicke der Linien */
+                        background-color: #9747FF;
+                        /* Lila Farbe */
+                    }
+
+                    &::before {
+                        left: -60px;
+                        /* Position links */
+                        transform: translateY(-50%);
+                    }
+
+                    &::after {
+                        right: -60px;
+                        /* Position rechts */
+                        transform: translateY(-50%);
+                    }
+                }
+
+                p {
+                    font-size: 16px;
+                    margin-bottom: -100px;
+                }
+            }
+
+
+            .portfolio-grid {
+                display: flex;
+                flex-direction: column;
+                /* Vertikale Anordnung */
+                gap: 40px;
+                /* Mehr Abstand zwischen Karten */
+                width: 100%;
+                /* Passt sich der Bildschirmbreite an */
+
+                .portfolio-card {
+                    display: flex;
+                    flex-direction: column;
+                    /* Bild und Details untereinander */
+                    align-items: center;
+                    text-align: center;
+                    gap: 20px;
+                    /* Abstand zwischen Bild und Text */
+                    padding: 15px;
+
+
+                    img {
+                        width: 90%;
+                        /* Bild passt in den Bildschirm */
+                        max-width: 300px;
+                        /* Maximale Breite des Bildes */
+                        height: auto;
+                        margin: 0 auto;
+                        /* Zentriert */
+                    }
+
+                    .portfolio-details {
+                        h3 {
+                            font-size: 18px;
+                            /* Angepasste Überschrift */
+                            margin-bottom: 10px;
+                        }
+
+                        .technologies {
+                            font-size: 14px;
+                            /* Kleinere Technologie-Beschreibung */
+                            color: #00FF00;
+                            margin-bottom: 10px;
+                        }
+
+                        .description {
+                            font-size: 12px;
+                            margin-bottom: 15px;
+                        }
+
+                        .buttons {
+                            display: flex;
+                            // flex-direction: column; /* Buttons untereinander */
+                            // gap: 10px; /* Abstand zwischen Buttons */
+
+                            .btn {
+                                font-size: 14px;
+                                padding: 10px 20px;
+                                width: 100%;
+                                /* Buttons nehmen die volle Breite ein */
+                                max-width: 200px;
+                                /* Maximale Breite der Buttons */
+                                margin: 0 auto;
+                                /* Zentrierung */
+
+                                &.live-test {
+                                    background-color: #9747FF;
+                                    color: white;
+                                }
+
+                                &.github {
+                                    background-color: transparent;
+                                    color: #00FF00;
+                                    border: 1px solid #00FF00;
+                                    /* Umrahmung für Github */
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .portfolio-card:nth-child(2) {
+                    flex-direction: column;
+                    /* Bild und Details vertikal */
+                    text-align: center;
+
+                    img {
+                        margin: 0 auto;
+                        /* Zentriert */
+                    }
+                }
+            }
+        }
+    }
 
 
 
@@ -385,7 +548,7 @@
     //         }
     //     }
     // }
-}
+
 
 @media (max-width: 404px) {
     .portfolio-section {
@@ -393,11 +556,17 @@
         text-align: center;
 
         .portfolio-header {
-            position: relative; /* Grundlage für Hintergrund */
-            background-image: url("../../../../public/background/lilavector.png"); /* Pfad zum Bild */
-            background-size: cover; /* Sorgt dafür, dass der Hintergrund das Element abdeckt */
-            background-position: center; /* Zentriert das Bild */
-            background-repeat: no-repeat; /* Verhindert Wiederholung */
+            position: relative;
+            /* Grundlage für Hintergrund */
+            background-image: url("../../../../public/background/lilavector.png");
+            /* Pfad zum Bild */
+            background-size: cover;
+            /* Sorgt dafür, dass der Hintergrund das Element abdeckt */
+            background-position: center;
+            /* Zentriert das Bild */
+            background-repeat: no-repeat;
+
+            /* Verhindert Wiederholung */
             h2 {
                 position: relative;
                 display: inline-block;
@@ -409,18 +578,23 @@
                     content: "";
                     position: absolute;
                     top: 50%;
-                    width: 50px; /* Länge der Linien */
-                    height: 2px; /* Dicke der Linien */
-                    background-color: #9747FF; /* Lila Farbe */
+                    width: 50px;
+                    /* Länge der Linien */
+                    height: 2px;
+                    /* Dicke der Linien */
+                    background-color: #9747FF;
+                    /* Lila Farbe */
                 }
-    
+
                 &::before {
-                    left: -60px; /* Position links */
+                    left: -60px;
+                    /* Position links */
                     transform: translateY(-50%);
                 }
-    
+
                 &::after {
-                    right: -60px; /* Position rechts */
+                    right: -60px;
+                    /* Position rechts */
                     transform: translateY(-50%);
                 }
             }
@@ -434,34 +608,44 @@
 
         .portfolio-grid {
             display: flex;
-            flex-direction: column; /* Vertikale Anordnung */
-            gap: 40px; /* Mehr Abstand zwischen Karten */
-            width: 100%; /* Passt sich der Bildschirmbreite an */
+            flex-direction: column;
+            /* Vertikale Anordnung */
+            gap: 40px;
+            /* Mehr Abstand zwischen Karten */
+            width: 100%;
+            /* Passt sich der Bildschirmbreite an */
 
             .portfolio-card {
                 display: flex;
-                flex-direction: column; /* Bild und Details untereinander */
+                flex-direction: column;
+                /* Bild und Details untereinander */
                 align-items: center;
                 text-align: center;
-                gap: 20px; /* Abstand zwischen Bild und Text */
+                gap: 20px;
+                /* Abstand zwischen Bild und Text */
                 padding: 15px;
-                
+
 
                 img {
-                    width: 90%; /* Bild passt in den Bildschirm */
-                    max-width: 300px; /* Maximale Breite des Bildes */
+                    width: 90%;
+                    /* Bild passt in den Bildschirm */
+                    max-width: 300px;
+                    /* Maximale Breite des Bildes */
                     height: auto;
-                    margin: 0 auto; /* Zentriert */
+                    margin: 0 auto;
+                    /* Zentriert */
                 }
 
                 .portfolio-details {
                     h3 {
-                        font-size: 18px; /* Angepasste Überschrift */
+                        font-size: 18px;
+                        /* Angepasste Überschrift */
                         margin-bottom: 10px;
                     }
 
                     .technologies {
-                        font-size: 14px; /* Kleinere Technologie-Beschreibung */
+                        font-size: 14px;
+                        /* Kleinere Technologie-Beschreibung */
                         color: #00FF00;
                         margin-bottom: 10px;
                     }
@@ -479,9 +663,12 @@
                         .btn {
                             font-size: 14px;
                             padding: 10px 20px;
-                            width: 100%; /* Buttons nehmen die volle Breite ein */
-                            max-width: 200px; /* Maximale Breite der Buttons */
-                            margin: 0 auto; /* Zentrierung */
+                            width: 100%;
+                            /* Buttons nehmen die volle Breite ein */
+                            max-width: 200px;
+                            /* Maximale Breite der Buttons */
+                            margin: 0 auto;
+                            /* Zentrierung */
 
                             &.live-test {
                                 background-color: #9747FF;
@@ -491,7 +678,8 @@
                             &.github {
                                 background-color: transparent;
                                 color: #00FF00;
-                                border: 1px solid #00FF00; /* Umrahmung für Github */
+                                border: 1px solid #00FF00;
+                                /* Umrahmung für Github */
                             }
                         }
                     }
@@ -499,14 +687,15 @@
             }
 
             .portfolio-card:nth-child(2) {
-                flex-direction: column; /* Bild und Details vertikal */
+                flex-direction: column;
+                /* Bild und Details vertikal */
                 text-align: center;
 
                 img {
-                    margin: 0 auto; /* Zentriert */
+                    margin: 0 auto;
+                    /* Zentriert */
                 }
             }
         }
     }
 }
-

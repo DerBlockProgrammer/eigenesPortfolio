@@ -1,4 +1,4 @@
-/* Grundlegendes Styling */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -6,9 +6,9 @@ body {
     color: white;
 }
 
-/* Testimonial Section */
+
 .testimonial-section {
-    background-color: #141D2F; // Hintergrundfarbe
+    background-color: #141D2F; 
     color: white;
 
     .testimonial-container {
@@ -18,14 +18,17 @@ body {
         gap: 50px;
         padding: 61px 155px;
         margin-top: 69px;
+        min-height: 300px; 
 
         .quote-box {
-            flex: 1; // Nimmt verfügbaren Platz ein
-            max-width: 600px; // Maximale Breite
-            border: 2px solid #70e61c; // Grüne Rahmenfarbe
+            flex: 1; 
+            max-width: 600px; 
+            // min-height: 200px; // Feste Mindesthöhe
+            border: 2px solid #70e61c; 
             border-radius: 15px;
             padding: 30px;
             position: relative;
+            // overflow: hidden; // Verhindert, dass Text außerhalb der Box sichtbar wird
 
             .quote-icon {
                 position: absolute;
@@ -42,6 +45,8 @@ body {
                 margin-bottom: 20px;
                 color: white;
                 font-weight: 400;
+                white-space: normal; 
+                overflow-wrap: break-word;
             }
 
             .author {
@@ -82,29 +87,29 @@ body {
                 right: 0px;
             }
         }
-
     }
+
     .navigation-dots {
         position: absolute;
-        left: 50%; // Zentriert horizontal
+        left: 50%; 
         transform: translateX(-50%);
         margin-bottom: 10px;
         cursor: pointer;
 
         img {
-            width: 100px; // Standardbreite der Punkte
+            width: 100px; 
             height: auto;
 
             @media (max-width: 950px) {
-                width: 80px; // Punkte werden kleiner bei kleineren Screens
+                width: 80px; 
             }
 
             @media (max-width: 694px) {
-                width: 60px; // Weitere Verkleinerung
+                width: 60px; 
             }
 
             @media (max-width: 404px) {
-                width: 40px; // Kleinste Größe
+                width: 40px; 
             }
         }
     }
@@ -113,10 +118,11 @@ body {
 
 
 
+
 @media(max-width: 950px) {
 
     .testimonial-section {
-        background-color: #141D2F; // Hintergrundfarbe
+        background-color: #141D2F; 
 
         color: white;
 
@@ -130,9 +136,9 @@ body {
             padding-left: 100px;
 
             .quote-box {
-                flex: 1; // Nimmt verfügbaren Platz ein
-                max-width: 600px; // Maximale Breite
-                border: 2px solid #70e61c; // Grüne Rahmenfarbe
+                flex: 1; 
+                max-width: 600px; 
+                border: 2px solid #70e61c; 
                 border-radius: 15px;
                 padding: 30px;
                 position: relative;
@@ -168,16 +174,16 @@ body {
             }
 
             .profile-box-container {
-                display: flex; // Legt den Kreis und den Strich nebeneinander
-                align-items: center; // Vertikale Ausrichtung
-                gap: 10px; // Abstand zwischen Kreis und Strich
+                display: flex; 
+                align-items: center; 
+                gap: 10px; 
 
                 .profile-box {
-                    position: relative; // Ermöglicht absolute Positionierung der Kinder
+                    position: relative; 
                     width: 167px;
                     height: 167px;
-                    border: 5px solid #9747FF; // Grüner Rand
-                    border-radius: 50%; // Kreisform
+                    border: 5px solid #9747FF; 
+                    border-radius: 50%; 
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -191,8 +197,8 @@ body {
                 }
 
                 .profile-line {
-                    width: 44px !important; // Breite des Strich-Bildes
-                    height: 3px; // Höhe des Strich-Bildes
+                    width: 44px !important; 
+                    height: 3px; 
                 }
             }
         }
@@ -204,7 +210,7 @@ body {
 @media(max-width: 694px) {
 
     .testimonial-section {
-        background-color: #141D2F; // Hintergrundfarbe
+        background-color: #141D2F; 
         padding: 50px;
         color: white;
 
@@ -217,9 +223,9 @@ body {
             margin-top: 69px;
 
             .quote-box {
-                flex: 1; // Nimmt verfügbaren Platz ein
-                max-width: 600px; // Maximale Breite
-                border: 2px solid #70e61c; // Grüne Rahmenfarbe
+                flex: 1; 
+                max-width: 600px; 
+                border: 2px solid #70e61c; 
                 border-radius: 15px;
                 padding: 30px;
                 position: relative;
@@ -255,16 +261,16 @@ body {
             }
 
             .profile-box-container {
-                display: flex; // Legt den Kreis und den Strich nebeneinander
-                align-items: center; // Vertikale Ausrichtung
-                gap: 10px; // Abstand zwischen Kreis und Strich
+                display: flex; 
+                align-items: center; 
+                gap: 10px; 
 
                 .profile-box {
-                    position: relative; // Ermöglicht absolute Positionierung der Kinder
+                    position: relative; 
                     width: 167px;
                     height: 167px;
-                    border: 5px solid #9747FF; // Grüner Rand
-                    border-radius: 50%; // Kreisform
+                    border: 5px solid #9747FF; 
+                    border-radius: 50%; 
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -278,8 +284,8 @@ body {
                 }
 
                 .profile-line {
-                    width: 100px; // Breite des Strich-Bildes
-                    height: 3px; // Höhe des Strich-Bildes
+                    width: 100px; 
+                    height: 3px; 
                   
                 }
             }
@@ -318,19 +324,15 @@ body {
 
                 .profile-box {
                     width: 144px;
-                    /* Festgelegte Größe der Box */
                     height: 144px;
                     border: 3px solid #9747FF;
 
                     >img {
                         border: 3px solid #00FF00;
-                        /* Optionaler Rand */
                         border-radius: 50%;
                         width: 144px;
-                        /* Bild wird direkt auf 144px gesetzt */
                         height: 144px;
                         object-fit: cover;
-                        /* Zuschneiden des Bildes */
                     }
                 }
 

@@ -1,26 +1,27 @@
 <section class="testimonial-section">
   <div class="testimonial-container">
+    <!-- Zitat-Box -->
     <div class="quote-box">
       <div class="quote-icon">
         <img src="background/Frame.png" alt="Quote Icon">
       </div>
       <p class="quote-text">
-        {{ currentTestimonial.quote }}
+        {{ currentTestimonial.description }}
       </p>
       <p class="author">
-        <span>{{ currentTestimonial.author }}</span> - {{ currentTestimonial.position }}
+        <span>{{ currentTestimonial.title }}</span> - {{ currentTestimonial.technologies }}
       </p>
     </div>
 
+    <!-- Profilbild -->
     <div class="profile">
-      <img [src]="currentTestimonial.profileImage" alt="Profile Picture">
+      <img [src]="currentTestimonial.image" alt="Profile Picture">
       <div class="profile-line"></div>
     </div>
   </div>
 
-  <!-- Navigation (Pfeile auf dem Bild) -->
+  <!-- Navigation (Pfeile oder Klickbereich) -->
   <div class="navigation-dots" (click)="changeTestimonial($event)">
     <img src="continue.png" alt="Navigation Arrows">
-</div>
-
+  </div>
 </section>
