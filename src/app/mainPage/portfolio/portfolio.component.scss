@@ -141,7 +141,7 @@
             }
 
             p {
-                font-size: 14px;
+                font-size: 21px;
                 line-height: 1.6;
                 color: #cfd1d4;
             }
@@ -187,7 +187,7 @@
                     }
 
                     .description {
-                        font-size: 12px;
+                        font-size: 19px;
                         color: #cfd1d4;
                         line-height: 1.5;
                         margin-bottom: 20px;
@@ -197,6 +197,11 @@
                         display: flex;
                         flex-direction: column; // Buttons untereinander anordnen
                         gap: 15px;
+                        font-size: 14px;
+                        padding: 10px 20px;
+                        width: 100%;
+                        max-width: 200px;
+                        margin: 0 auto;
 
                         .btn {
                             text-decoration: none;
@@ -236,318 +241,287 @@
     }
 }
 
-    @media(max-width:900px) {
-        .portfolio-section {
-            padding: 20px;
-            text-align: center;
+@media(max-width:900px) {
+    .portfolio-section {
+        padding: 20px;
+        text-align: center;
 
-            .portfolio-header {
+        .portfolio-header {
 
-                h2 {
-                    position: relative;
-                    display: inline-block;
-                    font-size: 45px;
-                    margin: 20px 0;
+            h2 {
+                position: relative;
+                display: inline-block;
+                font-size: 45px;
+                margin: 20px 0;
 
-                    &::before,
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        top: 50%;
-                        width: 50px;
-                        /* Länge der Linien */
-                        height: 2px;
-                        /* Dicke der Linien */
-                        background-color: #9747FF;
-                        /* Lila Farbe */
-                    }
-
-                    &::before {
-                        left: -60px;
-                        /* Position links */
-                        transform: translateY(-50%);
-                    }
-
-                    &::after {
-                        right: -60px;
-                        /* Position rechts */
-                        transform: translateY(-50%);
-                    }
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    width: 50px;
+                    /* Länge der Linien */
+                    height: 2px;
+                    /* Dicke der Linien */
+                    background-color: #9747FF;
+                    /* Lila Farbe */
                 }
 
-                p {
-                    font-size: 16px;
-                    margin-bottom: -100px;
+                &::before {
+                    left: -60px;
+                    /* Position links */
+                    transform: translateY(-50%);
+                }
+
+                &::after {
+                    right: -60px;
+                    /* Position rechts */
+                    transform: translateY(-50%);
                 }
             }
 
+            p {
+                font-size: 16px;
+                margin-bottom: -100px;
+            }
+        }
 
-            .portfolio-grid {
+
+        .portfolio-grid {
+            display: flex;
+            flex-direction: column;
+            /* Vertikale Anordnung */
+            gap: 40px;
+            /* Mehr Abstand zwischen Karten */
+            width: 100%;
+            /* Passt sich der Bildschirmbreite an */
+
+            .portfolio-card {
                 display: flex;
                 flex-direction: column;
-                /* Vertikale Anordnung */
-                gap: 40px;
-                /* Mehr Abstand zwischen Karten */
-                width: 100%;
-                /* Passt sich der Bildschirmbreite an */
-
-                .portfolio-card {
-                    display: flex;
-                    flex-direction: column;
-                    /* Bild und Details untereinander */
-                    align-items: center;
-                    text-align: center;
-                    gap: 20px;
-                    /* Abstand zwischen Bild und Text */
-                    padding: 15px;
+                /* Bild und Details untereinander */
+                align-items: center;
+                text-align: center;
+                gap: 20px;
+                /* Abstand zwischen Bild und Text */
+                padding: 15px;
 
 
-                    img {
-                        width: 90%;
-                        /* Bild passt in den Bildschirm */
-                        max-width: 300px;
-                        /* Maximale Breite des Bildes */
-                        height: auto;
-                        margin: 0 auto;
-                        /* Zentriert */
+                img {
+                    width: 90%;
+                    /* Bild passt in den Bildschirm */
+                    max-width: 300px;
+                    /* Maximale Breite des Bildes */
+                    height: auto;
+                    margin: 0 auto;
+                    /* Zentriert */
+                }
+
+                .portfolio-details {
+                    h3 {
+                        font-size: 18px;
+                        /* Angepasste Überschrift */
+                        margin-bottom: 10px;
                     }
 
-                    .portfolio-details {
-                        h3 {
-                            font-size: 18px;
-                            /* Angepasste Überschrift */
-                            margin-bottom: 10px;
-                        }
+                    .technologies {
+                        font-size: 14px;
+                        /* Kleinere Technologie-Beschreibung */
+                        color: #00FF00;
+                        margin-bottom: 10px;
+                    }
 
-                        .technologies {
+                    .description {
+                        font-size: 12px;
+                        margin-bottom: 15px;
+                    }
+
+                    .buttons {
+                        display: flex;
+                        // flex-direction: column; /* Buttons untereinander */
+                        // gap: 10px; /* Abstand zwischen Buttons */
+
+                        .btn {
                             font-size: 14px;
-                            /* Kleinere Technologie-Beschreibung */
-                            color: #00FF00;
-                            margin-bottom: 10px;
-                        }
+                            padding: 10px 20px;
+                            width: 100%;
+                            /* Buttons nehmen die volle Breite ein */
+                            max-width: 200px;
+                            /* Maximale Breite der Buttons */
+                            margin: 0 auto;
+                            /* Zentrierung */
 
-                        .description {
-                            font-size: 12px;
-                            margin-bottom: 15px;
-                        }
+                            &.live-test {
+                                background-color: #9747FF;
+                                color: white;
+                            }
 
-                        .buttons {
-                            display: flex;
-                            // flex-direction: column; /* Buttons untereinander */
-                            // gap: 10px; /* Abstand zwischen Buttons */
-
-                            .btn {
-                                font-size: 14px;
-                                padding: 10px 20px;
-                                width: 100%;
-                                /* Buttons nehmen die volle Breite ein */
-                                max-width: 200px;
-                                /* Maximale Breite der Buttons */
-                                margin: 0 auto;
-                                /* Zentrierung */
-
-                                &.live-test {
-                                    background-color: #9747FF;
-                                    color: white;
-                                }
-
-                                &.github {
-                                    background-color: transparent;
-                                    color: #00FF00;
-                                    border: 1px solid #00FF00;
-                                    /* Umrahmung für Github */
-                                }
+                            &.github {
+                                background-color: transparent;
+                                color: #00FF00;
+                                border: 1px solid #00FF00;
+                                /* Umrahmung für Github */
                             }
                         }
                     }
                 }
+            }
 
-                .portfolio-card:nth-child(2) {
-                    flex-direction: column;
-                    /* Bild und Details vertikal */
-                    text-align: center;
+            .portfolio-card:nth-child(2) {
+                flex-direction: column;
+                /* Bild und Details vertikal */
+                text-align: center;
 
-                    img {
-                        margin: 0 auto;
-                        /* Zentriert */
-                    }
+                img {
+                    margin: 0 auto;
+                    /* Zentriert */
                 }
             }
         }
     }
+}
 
 
-    @media(max-width:798px) {
-        .portfolio-section {
-            padding: 20px;
-            text-align: center;
+@media(max-width:798px) {
+    .portfolio-section {
+        padding: 20px;
+        text-align: center;
 
-            .portfolio-header {
+        .portfolio-header {
 
-                h2 {
-                    position: relative;
-                    display: inline-block;
-                    font-size: 45px;
-                    margin: 20px 0;
+            h2 {
+                position: relative;
+                display: inline-block;
+                font-size: 45px;
+                margin: 20px 0;
 
-                    &::before,
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        top: 50%;
-                        width: 50px;
-                        /* Länge der Linien */
-                        height: 2px;
-                        /* Dicke der Linien */
-                        background-color: #9747FF;
-                        /* Lila Farbe */
-                    }
-
-                    &::before {
-                        left: -60px;
-                        /* Position links */
-                        transform: translateY(-50%);
-                    }
-
-                    &::after {
-                        right: -60px;
-                        /* Position rechts */
-                        transform: translateY(-50%);
-                    }
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    width: 50px;
+                    /* Länge der Linien */
+                    height: 2px;
+                    /* Dicke der Linien */
+                    background-color: #9747FF;
+                    /* Lila Farbe */
                 }
 
-                p {
-                    font-size: 16px;
-                    margin-bottom: -100px;
+                &::before {
+                    left: -60px;
+                    /* Position links */
+                    transform: translateY(-50%);
+                }
+
+                &::after {
+                    right: -60px;
+                    /* Position rechts */
+                    transform: translateY(-50%);
                 }
             }
 
+            p {
+                font-size: 16px;
+                margin-bottom: -100px;
+            }
+        }
 
-            .portfolio-grid {
+
+        .portfolio-grid {
+            display: flex;
+            flex-direction: column;
+            /* Vertikale Anordnung */
+            gap: 40px;
+            /* Mehr Abstand zwischen Karten */
+            width: 100%;
+            /* Passt sich der Bildschirmbreite an */
+
+            .portfolio-card {
                 display: flex;
                 flex-direction: column;
-                /* Vertikale Anordnung */
-                gap: 40px;
-                /* Mehr Abstand zwischen Karten */
-                width: 100%;
-                /* Passt sich der Bildschirmbreite an */
-
-                .portfolio-card {
-                    display: flex;
-                    flex-direction: column;
-                    /* Bild und Details untereinander */
-                    align-items: center;
-                    text-align: center;
-                    gap: 20px;
-                    /* Abstand zwischen Bild und Text */
-                    padding: 15px;
+                /* Bild und Details untereinander */
+                align-items: center;
+                text-align: center;
+                gap: 20px;
+                /* Abstand zwischen Bild und Text */
+                padding: 15px;
 
 
-                    img {
-                        width: 90%;
-                        /* Bild passt in den Bildschirm */
-                        max-width: 300px;
-                        /* Maximale Breite des Bildes */
-                        height: auto;
-                        margin: 0 auto;
-                        /* Zentriert */
+                img {
+                    width: 90%;
+                    /* Bild passt in den Bildschirm */
+                    max-width: 300px;
+                    /* Maximale Breite des Bildes */
+                    height: auto;
+                    margin: 0 auto;
+                    /* Zentriert */
+                }
+
+                .portfolio-details {
+                    h3 {
+                        font-size: 18px;
+                        /* Angepasste Überschrift */
+                        margin-bottom: 10px;
                     }
 
-                    .portfolio-details {
-                        h3 {
-                            font-size: 18px;
-                            /* Angepasste Überschrift */
-                            margin-bottom: 10px;
-                        }
+                    .technologies {
+                        font-size: 14px;
+                        /* Kleinere Technologie-Beschreibung */
+                        color: #00FF00;
+                        margin-bottom: 10px;
+                    }
 
-                        .technologies {
+                    .description {
+                        font-size: 12px;
+                        margin-bottom: 15px;
+                    }
+
+                    .buttons {
+                        display: flex;
+                        // flex-direction: column; /* Buttons untereinander */
+                        // gap: 10px; /* Abstand zwischen Buttons */
+
+                        .btn {
                             font-size: 14px;
-                            /* Kleinere Technologie-Beschreibung */
-                            color: #00FF00;
-                            margin-bottom: 10px;
-                        }
+                            padding: 10px 20px;
+                            width: 100%;
+                            /* Buttons nehmen die volle Breite ein */
+                            max-width: 200px;
+                            /* Maximale Breite der Buttons */
+                            margin: 0 auto;
+                            /* Zentrierung */
 
-                        .description {
-                            font-size: 12px;
-                            margin-bottom: 15px;
-                        }
+                            &.live-test {
+                                background-color: #9747FF;
+                                color: white;
+                            }
 
-                        .buttons {
-                            display: flex;
-                            // flex-direction: column; /* Buttons untereinander */
-                            // gap: 10px; /* Abstand zwischen Buttons */
-
-                            .btn {
-                                font-size: 14px;
-                                padding: 10px 20px;
-                                width: 100%;
-                                /* Buttons nehmen die volle Breite ein */
-                                max-width: 200px;
-                                /* Maximale Breite der Buttons */
-                                margin: 0 auto;
-                                /* Zentrierung */
-
-                                &.live-test {
-                                    background-color: #9747FF;
-                                    color: white;
-                                }
-
-                                &.github {
-                                    background-color: transparent;
-                                    color: #00FF00;
-                                    border: 1px solid #00FF00;
-                                    /* Umrahmung für Github */
-                                }
+                            &.github {
+                                background-color: transparent;
+                                color: #00FF00;
+                                border: 1px solid #00FF00;
+                                /* Umrahmung für Github */
                             }
                         }
                     }
                 }
+            }
 
-                .portfolio-card:nth-child(2) {
-                    flex-direction: column;
-                    /* Bild und Details vertikal */
-                    text-align: center;
+            .portfolio-card:nth-child(2) {
+                flex-direction: column;
+                /* Bild und Details vertikal */
+                text-align: center;
 
-                    img {
-                        margin: 0 auto;
-                        /* Zentriert */
-                    }
+                img {
+                    margin: 0 auto;
+                    /* Zentriert */
                 }
             }
         }
     }
+}
 
-
-
-    //     @media (max-width: 768px) {
-    //         .portfolio-grid {
-    //             gap: 20px;
-    //         }
-
-    //         .portfolio-card {
-    //             flex-direction: column;
-    //             text-align: center;
-
-    //             img {
-    //                 margin: 0 auto 20px;
-    //             }
-
-    //             .portfolio-details {
-    //                 align-items: center;
-    //             }
-
-
-    //             .portfolio-card:nth-child(2) {
-    //                 flex-direction: column;
-    //                 text-align: center;
-
-    //                 img {
-    //                     margin-left: 0;
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
 
 
 @media (max-width: 404px) {

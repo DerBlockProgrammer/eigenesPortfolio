@@ -274,6 +274,83 @@ section {
     }
 }
 
+
+@media (max-width: 1024px) {
+    section {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: auto;
+        padding: 20px;
+
+        .content-wrapper {
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+        }
+
+        .photo {
+            width: 100vw;
+            height: auto;
+            display: flex;
+            justify-content: center;
+
+            img {
+                // width: 100vw;
+              
+            }
+        }
+
+        .text-wrapper {
+            width: 100vw;
+            align-items: center;
+            text-align: start;
+            margin-top: -102px;
+
+            .iam-and-name {
+                flex-direction: row;
+                align-items: center;
+                gap: 0px;
+                width: 229px;
+                white-space: nowrap;
+
+                .iam {
+                    transform: none;
+                    font-size: 18px; 
+                    text-align: start;
+                    transform: rotate(-90deg);
+                    width: 177px;
+                    height: 0px;
+                }
+
+                .name .all {
+                    .green {
+                        font-size: 24px; 
+                        margin-top: 29px;
+                    }
+
+                    .lila {
+                        font-size: 20px; 
+                    }
+                }
+            }
+
+            .buttonDiv {
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+
+                button {
+                    font-size: 18px;
+                    padding: 10px 20px;
+                }
+            }
+        }
+       
+    }
+}
+
+
 @media (max-width: 965px) {
     section {
         flex-direction: column;

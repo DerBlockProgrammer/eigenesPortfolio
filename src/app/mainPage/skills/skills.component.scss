@@ -176,7 +176,7 @@
                     /* Grüne Farbe */
                     color: white;
                     /* Weiße Schrift */
-                    font-size: 18px;
+                    font-size: 14px;
                     /* Schriftgröße */
                     font-weight: 600;
                     /* Schriftgewicht */
@@ -220,6 +220,90 @@
 
 }
 
+@media (max-width: 1024px) {
+    .skills-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .skills-text {
+            max-width: 92%; // Beschränkt die Breite der Schrift
+            text-align: right; // Text rechtsbündig
+            margin: 0 auto 20px 0; // Zentriert nach rechts ohne Overflow
+
+            h2 {
+                font-size: 48px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 19px;
+                line-height: 1.4;
+                margin: 5px 0; // Gleichmäßiger Abstand zwischen Zeilen
+
+                &:nth-child(2) {
+                    width: 100%; // Breite der zweiten Zeile fixieren
+                }
+            }
+        }
+
+        .skills-grid {
+            display: none; // Hauptgrid deaktivieren
+        }
+
+        .skills-grid2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); // Icons in 3 Spalten
+            gap: 0px;
+            margin-top: 20px;
+
+            .skill {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    width: 50px;
+                    height: auto;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font-size: 14px;
+                    margin: 0;
+                }
+            }
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+
+            button {
+                font-size: 26px;
+                padding: 10px 20px;
+                border-radius: 25px;
+                background-color: #70e61c;
+                color: white;
+                box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background-color: #5fc119;
+                    transform: translateY(-2px);
+                    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+                }
+            }
+        }
+        .greens {
+            position: absolute;
+            left: -95px;
+        }
+    }
+}
+
 @media(max-width: 846px) {
     .skills-section {
         display: flex;
@@ -230,7 +314,7 @@
         height: auto;
 
         .skills-grid {
-            display: grid;
+            display: none;
             grid-template-columns: repeat(4, 1fr);
             /* 4 Spalten */
             gap: 20px;
