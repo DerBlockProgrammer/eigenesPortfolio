@@ -1,3 +1,15 @@
+.shape{
+    margin-top: 459px;
+    width: 100%;
+    z-index: 2000;
+    position: absolute;
+    height: 253px;
+}
+
+
+
+
+
 section {
     position: relative;
     // background-color: #141D2F;
@@ -16,12 +28,14 @@ section {
         background-size: cover;
         background-repeat: no-repeat;
         z-index: -10;
-        >img{
+
+        >img {
             height: 80vh;
-            
+
         }
     }
-    .hero{
+
+    .hero {
         display: none;
     }
 
@@ -50,7 +64,7 @@ section {
             width: auto;
         }
     }
-   
+
     .text-wrapper {
         flex: 1;
         display: flex;
@@ -60,16 +74,18 @@ section {
         position: relative;
         z-index: 100;
 
+
+
         .iam-and-name {
             display: flex;
-            align-items: flex-start; 
+            align-items: flex-start;
             height: 200px;
-            
+
             .iam {
-                transform: rotate(-90deg); 
+                transform: rotate(-90deg);
                 font-size: 35px;
                 color: white;
-                line-height: 1; 
+                line-height: 1;
                 margin-top: 49px;
 
                 h2 {
@@ -94,7 +110,7 @@ section {
                         color: #9747FF;
                         font-size: 45px;
 
-                        > p {
+                        >p {
                             font-weight: 400;
                         }
                     }
@@ -107,6 +123,8 @@ section {
             width: 100%;
             display: flex;
             justify-content: center;
+
+            text-decoration: none;
 
             button {
                 background-color: #70e61c;
@@ -145,7 +163,7 @@ section {
         height: calc(100vh - 202px);
         overflow: hidden;
         z-index: 1;
-    
+
         .background-green {
             position: absolute;
             left: 52px;
@@ -154,15 +172,17 @@ section {
             background-size: cover;
             background-repeat: no-repeat;
             z-index: -10;
-            >img{
+
+            >img {
                 height: 80vh;
-                
+
             }
         }
-        .hero{
+
+        .hero {
             display: none;
         }
-    
+
         .content-wrapper {
             display: flex;
             justify-content: space-between;
@@ -172,7 +192,7 @@ section {
             height: 100%;
             padding: 0 40px;
         }
-    
+
         .photo {
             background-image: url("../../../../public/background/photoshadows.png");
             flex: 1;
@@ -182,13 +202,13 @@ section {
             align-items: center;
             z-index: 30;
             background-size: cover;
-    
+
             img {
                 height: 100%;
                 width: auto;
             }
         }
-       
+
         .text-wrapper {
             flex: 1;
             display: flex;
@@ -197,55 +217,55 @@ section {
             align-items: flex-start;
             position: relative;
             z-index: 100;
-    
+
             .iam-and-name {
                 display: flex;
-                align-items: flex-start; 
+                align-items: flex-start;
                 height: 200px;
-                
+
                 .iam {
-                    transform: rotate(-90deg); 
+                    transform: rotate(-90deg);
                     font-size: 26px;
                     color: white;
-                    line-height: 1; 
+                    line-height: 1;
                     margin-top: 36px;
-    
+
                     h2 {
                         font-weight: 400;
                         text-align: right;
                         margin: 0;
                     }
                 }
-    
+
                 .name {
                     .all {
                         display: flex;
                         flex-direction: column;
-    
+
                         .green {
                             color: white;
                             font-size: 38px;
                             font-weight: 700;
                         }
-    
+
                         .lila {
                             color: #9747FF;
                             font-size: 34px;
-    
-                            > p {
+
+                            >p {
                                 font-weight: 400;
                             }
                         }
                     }
                 }
             }
-    
+
             .buttonDiv {
                 margin-top: 20px;
                 width: 100%;
                 display: flex;
                 justify-content: center;
-    
+
                 button {
                     background-color: #70e61c;
                     color: white;
@@ -258,13 +278,13 @@ section {
                     cursor: pointer;
                     transition: all 0.3s ease;
                 }
-    
+
                 button:hover {
                     background-color: #9747FF;
                     box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
                     transform: translateY(-2px);
                 }
-    
+
                 button:active {
                     transform: translateY(2px);
                     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
@@ -297,7 +317,7 @@ section {
 
             img {
                 // width: 100vw;
-              
+
             }
         }
 
@@ -306,6 +326,7 @@ section {
             align-items: center;
             text-align: start;
             margin-top: -102px;
+            z-index: 5000;
 
             .iam-and-name {
                 flex-direction: row;
@@ -316,7 +337,7 @@ section {
 
                 .iam {
                     transform: none;
-                    font-size: 18px; 
+                    font-size: 18px;
                     text-align: start;
                     transform: rotate(-90deg);
                     width: 177px;
@@ -325,12 +346,12 @@ section {
 
                 .name .all {
                     .green {
-                        font-size: 24px; 
+                        font-size: 24px;
                         margin-top: 29px;
                     }
 
                     .lila {
-                        font-size: 20px; 
+                        font-size: 20px;
                     }
                 }
             }
@@ -346,7 +367,7 @@ section {
                 }
             }
         }
-       
+
     }
 }
 
@@ -373,7 +394,7 @@ section {
 
             img {
                 // width: 100vw;
-              
+
             }
         }
 
@@ -392,7 +413,7 @@ section {
 
                 .iam {
                     transform: none;
-                    font-size: 18px; 
+                    font-size: 18px;
                     text-align: start;
                     transform: rotate(-90deg);
                     width: 177px;
@@ -401,18 +422,18 @@ section {
 
                 .name .all {
                     .green {
-                        font-size: 24px; 
+                        font-size: 24px;
                         margin-top: 29px;
                     }
 
                     .lila {
-                        font-size: 20px; 
+                        font-size: 20px;
                     }
                 }
             }
 
             .buttonDiv {
-                margin-top: 20px;
+                margin-top: -33px;
                 display: flex;
                 justify-content: center;
 
@@ -422,12 +443,12 @@ section {
                 }
             }
         }
-       
+
     }
 }
 
 
-@media (max-width: 790px){
+@media (max-width: 790px) {
 
     section {
         position: relative;
@@ -454,17 +475,20 @@ section {
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: 1; /* Hintergrund unter allen anderen */
+        z-index: 1;
+        /* Hintergrund unter allen anderen */
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     .titelbackground {
         position: absolute;
-        top: 50%; /* Platziere das Shape */
+        top: 50%;
+        /* Platziere das Shape */
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 2; /* Shape zwischen dem Background und dem Bild Sergej */
+        z-index: 2;
+        /* Shape zwischen dem Background und dem Bild Sergej */
         width: 80%;
         height: auto;
         background-image: url("./../../../../public/HeroBackground.png");
@@ -475,7 +499,8 @@ section {
 
     .photo {
         position: relative;
-        z-index: 3; /* Bild hinter dem Shape */
+        z-index: 3;
+        /* Bild hinter dem Shape */
         width: 80%;
         height: auto;
         display: flex;
@@ -484,24 +509,29 @@ section {
     }
 
     .photo img {
-        width: 100%; /* Passt das Bild an die Breite an */
-        height: auto; /* Hält das Seitenverhältnis */
-        z-index: 3; /* Hinter dem Shape */
+        width: 100%;
+        /* Passt das Bild an die Breite an */
+        height: auto;
+        /* Hält das Seitenverhältnis */
+        z-index: 3;
+        /* Hinter dem Shape */
     }
 
     .text-wrapper {
-        position: absolute; /* Text auf dem Shape platzieren */
-        z-index: 4; /* Text über dem Shape */
+        position: absolute;
+        /* Text auf dem Shape platzieren */
+        z-index: 4;
+        /* Text über dem Shape */
         width: 100vw;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: start;
         color: white;
-        background-image: url("./../../../../public/HeroBackground.png");
+        // background-image: url("./../../../../public/HeroBackground.png");
         background-size: cover;
         background-position: 0 -23px;
-     
+
     }
 
     .text-wrapper .iam-and-name {
@@ -530,7 +560,7 @@ section {
         margin-top: 20px;
     }
 
-    .hero{
+    .hero {
         display: block;
         height: 77px;
         width: 100vw;
@@ -593,17 +623,20 @@ section {
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: 1; /* Hintergrund unter allen anderen */
+        z-index: 1;
+        /* Hintergrund unter allen anderen */
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     .titelbackground {
         position: absolute;
-        top: 50%; /* Platziere das Shape */
+        top: 50%;
+        /* Platziere das Shape */
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 2; /* Shape zwischen dem Background und dem Bild Sergej */
+        z-index: 2;
+        /* Shape zwischen dem Background und dem Bild Sergej */
         width: 80%;
         height: auto;
         background-image: url("./../../../../public/HeroBackground.png");
@@ -614,7 +647,8 @@ section {
 
     .photo {
         position: relative;
-        z-index: 3; /* Bild hinter dem Shape */
+        z-index: 3;
+        /* Bild hinter dem Shape */
         width: 80%;
         height: auto;
         display: flex;
@@ -623,21 +657,26 @@ section {
     }
 
     .photo img {
-        width: 100%; /* Passt das Bild an die Breite an */
-        height: auto; /* Hält das Seitenverhältnis */
-        z-index: 3; /* Hinter dem Shape */
+        width: 100%;
+        /* Passt das Bild an die Breite an */
+        height: auto;
+        /* Hält das Seitenverhältnis */
+        z-index: 3;
+        /* Hinter dem Shape */
     }
 
     .text-wrapper {
-        position: absolute; /* Text auf dem Shape platzieren */
-        z-index: 4; /* Text über dem Shape */
+        position: absolute;
+        /* Text auf dem Shape platzieren */
+        z-index: 4;
+        /* Text über dem Shape */
         width: 100vw;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: start;
         color: white;
-        background-image: url("./../../../../public/HeroBackground.png");
+        // background-image: url("./../../../../public/HeroBackground.png");
         background-size: cover;
         background-position: 0 -23px;
     }
@@ -668,7 +707,7 @@ section {
         margin-top: 20px;
     }
 
-    .hero{
+    .hero {
         display: block;
         height: 77px;
         width: 100vw;
@@ -676,5 +715,3 @@ section {
         z-index: 2334;
     }
 }
-
-

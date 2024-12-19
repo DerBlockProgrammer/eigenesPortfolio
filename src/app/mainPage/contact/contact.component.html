@@ -7,10 +7,14 @@
             <p>Need a Frontend developer? <b>Contact me!</b></p>
         </div>
         <div class="formular">
-            <form action="#" method="post">
-                <input type="text" placeholder="Your name" required>
-                <input type="email" placeholder="Your email" required>
-                <textarea placeholder="Your message" required></textarea>
+            <form  (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" action="#" method="post">
+                <input [(ngModel)]="contactData.name" type="text" placeholder="Your name" required>
+                <input [(ngModel)]="contactData.email" type="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                <textarea #message="ngModel" [(ngModel)]="contactData.message"   placeholder="Your message" required></textarea>
+
+                @if (!message.valid && message.touched && !message.disabled) {
+                    <span>Please enter a message</span>
+                }
                 <div class="checkbox">
                     <input type="checkbox" id="privacy" required>
                     <label for="privacy">

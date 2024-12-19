@@ -21,6 +21,7 @@ $checkbox-link-color: #9b59b6;
         flex-wrap: wrap;
         height: auto;
         z-index: 2;
+        margin-top: -68px;
 
         .text {
             flex: 1;
@@ -51,7 +52,7 @@ $checkbox-link-color: #9b59b6;
                 flex-direction: column;
                 gap: 20px;
 
-                input,
+                input [type=text],[type=email], 
                 textarea {
                     padding: 10px;
                     border: 1px solid $primary-color;
@@ -1009,7 +1010,7 @@ $checkbox-link-color: #9b59b6;
     }
 }
 
-@media(max-width:340px) {
+@media(max-width:352px) {
     .contactDiv {
         display: flex;
         justify-content: center;
@@ -1139,7 +1140,7 @@ $checkbox-link-color: #9b59b6;
                     padding-left: 232px;
 
                     img {
-                        width: 25px;
+                        width: 20px;
                         height: auto;
                         cursor: pointer;
                         transition: transform 0.3s ease;

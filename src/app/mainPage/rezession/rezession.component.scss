@@ -77,13 +77,13 @@ body {
             }
 
             .profile-line {
-                position: relative;
-                width: 41px;
+                position: absolute;
+                width: 341px;
                 height: 3px;
-                background-color: #00FF00;
+                background-color: #0f0;
                 top: 50%;
                 transform: translateY(-50%);
-                right: 0px;
+                right: -337px;
             }
         }
     }
