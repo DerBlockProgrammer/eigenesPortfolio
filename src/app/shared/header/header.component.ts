@@ -6,14 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  isMenuOpen: boolean = false;
+  isMenuOpen = false;
 
-  // Öffnen/Schließen des Menüs
+ 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  // Schließen des Menüs beim Link-Klick
+
   closeMenu(): void {
     this.isMenuOpen = false;
   }

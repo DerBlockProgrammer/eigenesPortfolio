@@ -22,12 +22,10 @@ body {
         .quote-box {
             flex: 1;
             max-width: 600px;
-            // min-height: 200px; // Feste Mindesthöhe
             border: 2px solid #70e61c;
             border-radius: 15px;
             padding: 30px;
             position: relative;
-            // overflow: hidden; // Verhindert, dass Text außerhalb der Box sichtbar wird
 
             .quote-icon {
                 position: absolute;

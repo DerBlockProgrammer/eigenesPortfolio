@@ -7,22 +7,62 @@
             <p>Need a Frontend developer? <b>Contact me!</b></p>
         </div>
         <div class="formular">
-            <form  (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" action="#" method="post">
-                <input [(ngModel)]="contactData.name" type="text" placeholder="Your name" required>
-                <input [(ngModel)]="contactData.email" type="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-                <textarea #message="ngModel" [(ngModel)]="contactData.message"   placeholder="Your message" required></textarea>
-
-                @if (!message.valid && message.touched && !message.disabled) {
-                    <span>Please enter a message</span>
-                }
-                <div class="checkbox">
-                    <input type="checkbox" id="privacy" required>
-                    <label for="privacy">
-                        I’ve read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.
-                    </label>
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" action="#" method="post">
+                <div class="form-group">
+                  <input
+                    [(ngModel)]="contactData.name"
+                    name="name"
+                    type="text"
+                    placeholder="Your name"
+                    required
+                    #name="ngModel"
+                    [class.invalid]="name.invalid && name.touched"
+                    [class.valid]="name.valid && name.touched"
+                  />
+                  <span *ngIf="name.invalid && name.touched" class="validation-icon error-icon">!</span>
+                  <span *ngIf="name.valid && name.touched" class="validation-icon success-icon">✔</span>
                 </div>
-                <button type="submit">Send message :)</button>
-            </form>
+              
+                <div class="form-group">
+                  <input
+                    [(ngModel)]="contactData.email"
+                    name="email"
+                    type="email"
+                    placeholder="Your email"
+                    required
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                    #email="ngModel"
+                    [class.invalid]="email.invalid && email.touched"
+                    [class.valid]="email.valid && email.touched"
+                  />
+                  <span *ngIf="email.invalid && email.touched" class="validation-icon error-icon">!</span>
+                  <span *ngIf="email.valid && email.touched" class="validation-icon success-icon">✔</span>
+                </div>
+              
+                <div class="form-group">
+                  <textarea
+                    [(ngModel)]="contactData.message"
+                    name="message"
+                    placeholder="Your message"
+                    required
+                    #message="ngModel"
+                    [class.invalid]="message.invalid && message.touched"
+                    [class.valid]="message.valid && message.touched"
+                  ></textarea>
+                  <span *ngIf="message.invalid && message.touched" class="validation-icon error-icon">!</span>
+                  <span *ngIf="message.valid && message.touched" class="validation-icon success-icon">✔</span>
+                </div>
+              
+                <div class="checkbox">
+                  <input type="checkbox" id="privacy" required />
+                  <label for="privacy">
+                    I’ve read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.
+                  </label>
+                </div>
+              
+                <button type="submit" [disabled]="!contactForm.valid">Send message :)</button>
+              </form>
+              
             
             <a href="#arrowUp" class="arrow">
                 <img src="./background/arrow.png" alt="Arrow">

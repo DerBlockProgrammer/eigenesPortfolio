@@ -16,6 +16,7 @@ interface TestimonialCard {
   styleUrls: ['./rezession.component.scss'],
 })
 export class RezessionComponent {
+
   testimonialCards: TestimonialCard[] = [
     {
       image: 'portfolio/sergej.png',
@@ -36,29 +37,30 @@ export class RezessionComponent {
       title: 'S. Thompson',
       technologies: 'Project Manager',
       description:
-        'Marc hat komplexe Projekte strukturiert und zielgerichtet zum Erfolg geführt, stets mit einem klaren Blick für Prioritäten und Teamkommunikation. Seine Fähigkeit, Herausforderungen zu bewältigen und Lösungen zu finden, war entscheidend für den Projekterfolg. ',
+        'Marc hat komplexe Projekte strukturiert und zielgerichtet zum Erfolg geführt, stets mit einem klaren Blick für Prioritäten und Teamkommunikation. Seine Fähigkeit, Herausforderungen zu bewältigen und Lösungen zu finden, war entscheidend für den Projekterfolg.',
     },
   ];
 
+ 
   currentIndex: number = 0;
 
-  // Funktion für das aktuelle Testimonial
+ 
   get currentTestimonial(): TestimonialCard {
     return this.testimonialCards[this.currentIndex];
   }
 
-  // Funktion für Navigation (Pfeile oder Klick)
+  /**
+
+   * @param event 
+   */
   changeTestimonial(event: MouseEvent): void {
     const clickPosition =
       event.offsetX / (event.currentTarget as HTMLElement).clientWidth;
 
-    if (clickPosition < 0.5) {
-      this.currentIndex =
-        (this.currentIndex - 1 + this.testimonialCards.length) %
-        this.testimonialCards.length;
-    } else {
-      this.currentIndex =
-        (this.currentIndex + 1) % this.testimonialCards.length;
-    }
+    this.currentIndex =
+      clickPosition < 0.5
+        ? (this.currentIndex - 1 + this.testimonialCards.length) %
+          this.testimonialCards.length
+        : (this.currentIndex + 1) % this.testimonialCards.length;
   }
 }

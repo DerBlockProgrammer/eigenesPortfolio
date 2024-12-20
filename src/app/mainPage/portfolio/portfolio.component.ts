@@ -12,12 +12,13 @@ interface PortfolioCard {
 
 @Component({
   selector: 'app-portfolio',
-  standalone: true, 
-  imports: [CommonModule], 
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss'],
 })
 export class PortfolioComponent {
+ 
   portfolioCards: PortfolioCard[] = [
     {
       image: 'portfolio/join.png',
@@ -40,7 +41,7 @@ export class PortfolioComponent {
     {
       image: 'portfolio/pokedex.png',
       title: 'PokeDex',
-      technologies: 'Angular | Javascript',
+      technologies: 'Angular | JavaScript',
       description:
         'My Pokédex program allows users to search for and view detailed information about various Pokémon, including their names, types, abilities, and stats, providing an interactive and organized way to explore the Pokémon world.',
       liveLink: '#',

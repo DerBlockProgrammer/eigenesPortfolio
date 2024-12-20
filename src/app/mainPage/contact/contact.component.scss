@@ -43,140 +43,162 @@ $checkbox-link-color: #9b59b6;
         }
 
         .formular {
-            flex: 1;
-            max-width: 500px;
-            position: relative;
-
             form {
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
 
-                input [type=text],[type=email], 
+                input,
                 textarea {
+                    width: 100%;
                     padding: 10px;
                     border: 1px solid $primary-color;
                     border-radius: 5px;
                     background-color: $background-color;
                     color: $text-color;
                     font-size: 16px;
-                    transition: border-color 0.3s ease;
+                    transition: border-color 0.3s ease, background-color 0.3s ease;
 
                     &:focus {
                         outline: none;
-                        border-color: $primary-color;
+                    }
+                    &.invalid {
+                        border-color: red;
                     }
 
-                    &:hover {
+                    &.valid {
                         border-color: #70e61c;
-                        cursor: pointer;
                     }
                 }
 
-                textarea {
-                    height: 193px;
-                    resize: none;
-                }
+                .form-group {
+                    position: relative;
 
-                .checkbox {
-                    display: flex;
-                    align-items: flex-start;
-                    gap: 10px;
-                    font-size: 14px;
-                    line-height: 1.4;
+                    .validation-icon {
+                        position: absolute;
+                        top: 50%;
+                        right: 10px;
+                        transform: translateY(-50%);
+                        font-size: 18px;
+                        font-weight: bold;
 
-                    input {
-                        margin: 0;
-                        align-self: center;
+                        &.error-icon {
+                            color: red;
+                        }
 
-                    }
-
-                    label {
-                        margin: 0;
-
-                        a {
-                            color: $checkbox-link-color;
-                            text-decoration: none;
+                        &.success-icon {
+                            color: #70e61c;
                         }
                     }
-                }
 
-
-                button {
-                    display: block;
-                    /* Stellt sicher, dass der Button wie ein Blockelement behandelt wird */
-                    margin: 20px auto;
-                    /* Zentriert den Button horizontal */
-                    padding: 10px 30px;
-                    /* Kleinere Innenabstände für einen schmaleren Button */
-                    width: fit-content;
-                    /* Passt die Breite an den Textinhalt an */
-                    border: none;
-                    background-color: #b6b6b6;
-                    /* Hellgrau wie im Zielbild */
-                    color: $text-color;
-                    /* Weißer Text */
-                    font-size: 16px;
-                    /* Schriftgröße */
-                    font-weight: 500;
-                    cursor: pointer;
-                    border-radius: 9px;
-                    /* Abgerundete Ecken */
-                    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-                    /* Schatteneffekt */
-                    transition: all 0.3s ease;
-                    font-weight: 400;
-
-                    &:hover {
-                        background-color: $button-hover-color;
-                        /* Dunklerer Farbton beim Hover */
-                    }
-
-                    &:active {
-                        transform: translateY(1px);
-                        /* Leichtes Drücken beim Klicken */
-                        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
-                        /* Schwächerer Schatten */
-                    }
-                }
-
-            }
-
-            .arrow {
-                position: absolute;
-                bottom: -60px;
-                right: 10px;
-                z-index: 10;
-
-
-                img {
-                    width: 25px;
-                    height: auto;
-                    cursor: pointer;
-                    transition: transform 0.3s ease;
-                    border-color: #70e61c;
-
-                    &:hover {
-                        transform: scale(1.1);
-                      
-                        
+                    .error-text {
+                        color: red;
+                        font-size: 12px;
+                        margin-top: 5px;
                     }
                 }
             }
         }
+
+        &:hover {
+            border-color: #70e61c;
+            cursor: pointer;
+        }
     }
 
-    .purple {
-        position: absolute;
-        left: 0;
-        height: 63vh;
+    textarea {
+        height: 193px;
+        resize: none;
+    }
 
-        >img {
-            height: 100%;
-            width: 53vh;
+    .checkbox {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 14px;
+        line-height: 1.4;
+
+        input {
+            margin: 0;
+            align-self: center;
+
+        }
+
+        label {
+            margin: 0;
+
+            a {
+                color: $checkbox-link-color;
+                text-decoration: none;
+            }
+        }
+    }
+
+
+    button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 30px;
+        width: fit-content;
+        border: none;
+        background-color: #b6b6b6;
+        color: $text-color;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        border-radius: 9px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        font-weight: 400;
+
+        &:hover {
+            background-color: $button-hover-color;
+        }
+
+        &:active {
+            transform: translateY(1px);
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+}
+
+.arrow {
+    position: absolute;
+    bottom: -60px;
+    right: 10px;
+    z-index: 10;
+
+
+    img {
+        width: 25px;
+        height: auto;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        border-color: #70e61c;
+
+        &:hover {
+            transform: scale(1.1);
+
+
         }
     }
 }
+
+
+
+.purple {
+    position: absolute;
+    left: 0;
+    height: 63vh;
+
+    >img {
+        height: 100%;
+        width: 53vh;
+    }
+}
+
+
 @media(max-width:1024px) {
     .contactDiv {
         display: flex;
@@ -271,39 +293,27 @@ $checkbox-link-color: #9b59b6;
 
                     button {
                         display: block;
-                        /* Stellt sicher, dass der Button wie ein Blockelement behandelt wird */
                         margin: 20px auto;
-                        /* Zentriert den Button horizontal */
                         padding: 10px 30px;
-                        /* Kleinere Innenabstände für einen schmaleren Button */
                         width: fit-content;
-                        /* Passt die Breite an den Textinhalt an */
                         border: none;
                         background-color: #b6b6b6;
-                        /* Hellgrau wie im Zielbild */
                         color: $text-color;
-                        /* Weißer Text */
                         font-size: 22px;
-                        /* Schriftgröße */
                         font-weight: 500;
                         cursor: pointer;
                         border-radius: 9px;
-                        /* Abgerundete Ecken */
                         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-                        /* Schatteneffekt */
                         transition: all 0.3s ease;
                         font-weight: 400;
 
                         &:hover {
                             background-color: $button-hover-color;
-                            /* Dunklerer Farbton beim Hover */
                         }
 
                         &:active {
                             transform: translateY(1px);
-                            /* Leichtes Drücken beim Klicken */
                             box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
-                            /* Schwächerer Schatten */
                         }
                     }
 
@@ -436,39 +446,27 @@ $checkbox-link-color: #9b59b6;
 
                     button {
                         display: block;
-                        /* Stellt sicher, dass der Button wie ein Blockelement behandelt wird */
                         margin: 20px auto;
-                        /* Zentriert den Button horizontal */
                         padding: 10px 30px;
-                        /* Kleinere Innenabstände für einen schmaleren Button */
                         width: fit-content;
-                        /* Passt die Breite an den Textinhalt an */
                         border: none;
                         background-color: #b6b6b6;
-                        /* Hellgrau wie im Zielbild */
                         color: $text-color;
-                        /* Weißer Text */
                         font-size: 16px;
-                        /* Schriftgröße */
                         font-weight: 500;
                         cursor: pointer;
                         border-radius: 9px;
-                        /* Abgerundete Ecken */
                         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-                        /* Schatteneffekt */
                         transition: all 0.3s ease;
                         font-weight: 400;
 
                         &:hover {
                             background-color: $button-hover-color;
-                            /* Dunklerer Farbton beim Hover */
                         }
 
                         &:active {
                             transform: translateY(1px);
-                            /* Leichtes Drücken beim Klicken */
                             box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
-                            /* Schwächerer Schatten */
                         }
                     }
 
@@ -603,39 +601,27 @@ $checkbox-link-color: #9b59b6;
 
                     button {
                         display: block;
-                        /* Stellt sicher, dass der Button wie ein Blockelement behandelt wird */
                         margin: 20px auto;
-                        /* Zentriert den Button horizontal */
                         padding: 6px 19px;
-                        /* Kleinere Innenabstände für einen schmaleren Button */
                         width: fit-content;
-                        /* Passt die Breite an den Textinhalt an */
                         border: none;
                         background-color: #b6b6b6;
-                        /* Hellgrau wie im Zielbild */
                         color: $text-color;
-                        /* Weißer Text */
                         font-size: 16px;
-                        /* Schriftgröße */
                         font-weight: 500;
                         cursor: pointer;
                         border-radius: 9px;
-                        /* Abgerundete Ecken */
                         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-                        /* Schatteneffekt */
                         transition: all 0.3s ease;
                         font-weight: 400;
 
                         &:hover {
                             background-color: $button-hover-color;
-                            /* Dunklerer Farbton beim Hover */
                         }
 
                         &:active {
                             transform: translateY(1px);
-                            /* Leichtes Drücken beim Klicken */
                             box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
-                            /* Schwächerer Schatten */
                         }
                     }
 
@@ -769,39 +755,27 @@ $checkbox-link-color: #9b59b6;
 
                     button {
                         display: block;
-                        /* Stellt sicher, dass der Button wie ein Blockelement behandelt wird */
                         margin: 20px auto;
-                        /* Zentriert den Button horizontal */
                         padding: 6px 19px;
-                        /* Kleinere Innenabstände für einen schmaleren Button */
                         width: fit-content;
-                        /* Passt die Breite an den Textinhalt an */
                         border: none;
                         background-color: #b6b6b6;
-                        /* Hellgrau wie im Zielbild */
                         color: $text-color;
-                        /* Weißer Text */
                         font-size: 12px;
-                        /* Schriftgröße */
                         font-weight: 500;
                         cursor: pointer;
                         border-radius: 9px;
-                        /* Abgerundete Ecken */
                         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-                        /* Schatteneffekt */
                         transition: all 0.3s ease;
                         font-weight: 400;
 
                         &:hover {
                             background-color: $button-hover-color;
-                            /* Dunklerer Farbton beim Hover */
                         }
 
                         &:active {
                             transform: translateY(1px);
-                            /* Leichtes Drücken beim Klicken */
                             box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
-                            /* Schwächerer Schatten */
                         }
                     }
 
@@ -939,32 +913,22 @@ $checkbox-link-color: #9b59b6;
 
                     button {
                         display: block;
-                        /* Stellt sicher, dass der Button wie ein Blockelement behandelt wird */
                         margin: 20px auto;
-                        /* Zentriert den Button horizontal */
                         padding: 6px 19px;
-                        /* Kleinere Innenabstände für einen schmaleren Button */
                         width: fit-content;
-                        /* Passt die Breite an den Textinhalt an */
                         border: none;
                         background-color: #b6b6b6;
-                        /* Hellgrau wie im Zielbild */
                         color: $text-color;
-                        /* Weißer Text */
                         font-size: 12px;
-                        /* Schriftgröße */
                         font-weight: 500;
                         cursor: pointer;
                         border-radius: 9px;
-                        /* Abgerundete Ecken */
                         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-                        /* Schatteneffekt */
                         transition: all 0.3s ease;
                         font-weight: 400;
 
                         &:hover {
                             background-color: $button-hover-color;
-                            /* Dunklerer Farbton beim Hover */
                         }
 
                         &:active {
