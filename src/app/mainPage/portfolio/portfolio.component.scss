@@ -94,6 +94,9 @@
                         &.github {
                             background-color: transparent;
                             color: #00FF00;
+                            border: 1px solid #70e61c;
+                            transition: background-color 0.3s;
+                           
                         }
 
                         &:hover {
@@ -315,6 +318,7 @@
                     height: auto;
                     margin: 0 auto;
                     /* Zentriert */
+                    margin-top: 43px;
                 }
 
                 .portfolio-details {
@@ -456,6 +460,7 @@
                     height: auto;
                     margin: 0 auto;
                     /* Zentriert */
+                    margin-top: 43px;
                 }
 
                 .portfolio-details {
@@ -530,10 +535,10 @@
         text-align: center;
 
         .portfolio-header {
-            display: none;
+          
             position: relative;
             /* Grundlage für Hintergrund */
-            background-image: url("../../../../public/background/lilavector.png");
+          
             /* Pfad zum Bild */
             background-size: cover;
             /* Sorgt dafür, dass der Hintergrund das Element abdeckt */
@@ -609,6 +614,7 @@
                     height: auto;
                     margin: 0 auto;
                     /* Zentriert */
+                    margin-top: 43px;
                 }
 
                 .portfolio-details {
