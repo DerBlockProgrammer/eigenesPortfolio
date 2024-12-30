@@ -30,7 +30,7 @@ export class PortfolioComponent {
       githubLink: '#',
     },
     {
-      image: 'portfolio/Sharkie.png',
+      image: 'portfolio/elpollo.png',
       title: 'El Pollo Loco',
       technologies: 'JavaScript | HTML | CSS',
       description:
@@ -44,8 +44,8 @@ export class PortfolioComponent {
       technologies: 'Angular | JavaScript',
       description:
         'My Pokédex program allows users to search for and view detailed information about various Pokémon, including their names, types, abilities, and stats, providing an interactive and organized way to explore the Pokémon world.',
-      liveLink: '#',
-      githubLink: '#',
+      liveLink: 'https://derblockprogrammer.github.io/Pokedex/',
+      githubLink: 'https://github.com/DerBlockProgrammer/Pokedex',
     },
   ];
 }

@@ -530,6 +530,7 @@
         text-align: center;
 
         .portfolio-header {
+            display: none;
             position: relative;
             /* Grundlage für Hintergrund */
             background-image: url("../../../../public/background/lilavector.png");
@@ -633,6 +634,8 @@
                         display: flex;
                         // flex-direction: column; /* Buttons untereinander */
                         // gap: 10px; /* Abstand zwischen Buttons */
+                        padding-right: 62px;
+                        width: 70%;
 
                         .btn {
                             font-size: 14px;
