@@ -96,6 +96,7 @@ body {
         img {
             width: 100px;
             height: auto;
+            margin-top: 7px;
 
             @media (max-width: 950px) {
                 width: 80px;
@@ -107,6 +108,7 @@ body {
 
             @media (max-width: 404px) {
                 width: 40px;
+                top: 352px;
             }
         }
     }
@@ -278,7 +280,15 @@ body {
                         border-radius: 50%;
                         object-fit: cover;
                     }
+                    >img {
+                        border: 3px solid #00FF00;
+                        border-radius: 50%;
+                        width: 144px;
+                        height: 144px;
+                        object-fit: cover;
+                    }
                 }
+                
 
                 .profile-line {
                     width: 100px;
@@ -588,7 +598,17 @@ body {
                     transform: translateY(-50%);
                     right: 0px;
                 }
+                
+            
 
+            }
+            .navigation-dots {
+                display: none;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-bottom: 10px;
+                cursor: pointer;
             }
         }
     }

@@ -10,15 +10,17 @@
       <p class="author">
         <span>{{ currentTestimonial.title }}</span> - {{ currentTestimonial.technologies }}
       </p>
+      <div class="navigation-dots" (click)="changeTestimonial($event)">
+        <img src="continue.png" alt="Navigation Arrows">
+      </div>
     </div>
 
     <div class="profile">
       <img [src]="currentTestimonial.image" alt="Profile Picture">
       <div class="profile-line"></div>
     </div>
+ 
   </div>
 
-  <div class="navigation-dots" (click)="changeTestimonial($event)">
-    <img src="continue.png" alt="Navigation Arrows">
-  </div>
+ 
 </section>
