@@ -100,10 +100,6 @@ $checkbox-link-color: #9b59b6;
             }
         }
 
-        &:hover {
-            border-color: #70e61c;
-            cursor: pointer;
-        }
     }
 
     textarea {
@@ -162,25 +158,23 @@ $checkbox-link-color: #9b59b6;
     }
 
 }
-
 .arrow {
     position: absolute;
-
     right: 40px;
     z-index: 10;
-
 
     img {
         width: 25px;
         height: auto;
         cursor: pointer;
-        transition: transform 0.3s ease;
-        border-color: #70e61c;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+        border: 1px solid white; // Standardfarbe für den Border ist Weiß
+        border-radius: 50%; // Runder Rand
+        box-sizing: border-box;
 
         &:hover {
             transform: scale(1.1);
-
-
+            border-color: #70e61c; // Ändert den Rand beim Hover auf Grün
         }
     }
 }
@@ -817,7 +811,8 @@ $checkbox-link-color: #9b59b6;
 
 }
 
-@media(max-width:404px) {
+
+@media(max-width:530px) {
     .contactDiv {
         display: flex;
         justify-content: center;
@@ -944,7 +939,165 @@ $checkbox-link-color: #9b59b6;
 
                 .arrow {
                     position: relative;
-                    bottom: -10px;
+                    bottom: 7px;
+                    z-index: 10;
+                    padding-left: 346px;
+
+                    img {
+                        width: 25px;
+                        height: auto;
+                        cursor: pointer;
+                        transition: transform 0.3s ease;
+
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+
+        .purple {
+            position: absolute;
+            left: 0;
+            height: 63vh;
+
+            >img {
+                height: 400px;
+                width: 31vh;
+            }
+        }
+    }
+}
+
+@media(max-width:437px) {
+    .contactDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #141d2f;
+        padding: 50px;
+        color: white;
+        height: 66vh;
+
+        .contact {
+            display: flex;
+            gap: 35px;
+            max-width: 1200px;
+            width: 100%;
+            flex-wrap: wrap;
+            height: auto;
+            z-index: 2;
+
+            .text {
+                flex: 1;
+                max-width: 500px;
+
+                span {
+                    font-size: 18px;
+                    font-weight: bold;
+                    // display: block;
+                    margin-bottom: 20px;
+                    margin-top: 144px;
+                }
+
+                p {
+                    margin: 10px 0;
+                    line-height: 1.6;
+                    font-size: 10px;
+                    font-weight: 400;
+                }
+
+
+            }
+
+            .formular {
+                flex: 1;
+                max-width: 500px;
+                position: relative;
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    input,
+                    textarea {
+                        padding: 10px;
+                        border: 1px solid $primary-color;
+                        border-radius: 5px;
+                        background-color: $background-color;
+                        color: $text-color;
+                        font-size: 12px;
+
+                        &:focus {
+                            outline: none;
+                            border-color: $primary-color;
+                        }
+                    }
+
+                    textarea {
+                        height: 193px;
+                        resize: none;
+                    }
+
+                    .checkbox {
+                        // display: flex;
+                        align-items: flex-start;
+                        gap: 10px;
+                        font-size: 9px;
+                        line-height: 1.4;
+
+                        input {
+                            margin: 0;
+                            align-self: center;
+
+                        }
+
+                        label {
+                            margin: 0;
+
+                            a {
+                                color: $checkbox-link-color;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+
+
+                    button {
+                        display: block;
+                        margin: 20px auto;
+                        padding: 6px 19px;
+                        width: fit-content;
+                        border: none;
+                        background-color: #b6b6b6;
+                        color: $text-color;
+                        font-size: 12px;
+                        font-weight: 500;
+                        cursor: pointer;
+                        border-radius: 9px;
+                        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+                        transition: all 0.3s ease;
+                        font-weight: 400;
+
+                        &:hover {
+                            background-color: $button-hover-color;
+                        }
+
+                        &:active {
+                            transform: translateY(1px);
+                            /* Leichtes Drücken beim Klicken */
+                            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+                            /* Schwächerer Schatten */
+                        }
+                    }
+
+                }
+
+                .arrow {
+                    position: relative;
+                    bottom: 7px;
                     z-index: 10;
                     padding-left: 261px;
 

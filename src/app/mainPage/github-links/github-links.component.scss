@@ -20,6 +20,9 @@ section {
     height: 30px;
     width: 30px;
     cursor: pointer; 
+    &:hover {
+        transform: scale(1.2); // Vergrößerung bei Hover
+    }
 }
 
 #links h3 {

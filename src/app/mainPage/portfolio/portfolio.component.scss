@@ -95,13 +95,13 @@
                             background-color: transparent;
                             color: #00FF00;
                             border: 1px solid #70e61c;
-                            transition: background-color 0.3s;
-                           
-                        }
-
-                        &:hover {
-                            filter: brightness(0.9);
-
+                            transition: background-color 0.3s, color 0.3s;
+                        
+                            &:hover {
+                                background-color: #70e61c; /* Hintergrund wird grün */
+                                color: #ffffff; /* Textfarbe ändern */
+                                border-color: #00FF00; /* Rand leicht anpassen */
+                            }
                         }
                     }
                 }
