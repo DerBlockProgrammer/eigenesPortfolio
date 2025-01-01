@@ -19,7 +19,7 @@ export class ContactComponent {
     message: "",
   };
 
-  mailTest = false;
+  mailTest = true;
 
   post = {
     endPoint: 'https://marc-vossler.de/sendMail.php',
