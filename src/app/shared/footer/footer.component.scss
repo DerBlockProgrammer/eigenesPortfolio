@@ -21,8 +21,6 @@
             cursor: pointer;
             /* Zeigt Hand-Cursor an */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            /* Sanfte Übergänge für die Effekte */
-
             &:hover {
                 transform: scale(1.1);
             }
