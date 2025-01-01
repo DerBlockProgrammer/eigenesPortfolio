@@ -17,8 +17,7 @@ body {
   padding: 10px 20px;
   background-color: #141D2F;
 
-  /* Logo */
-  /* Logo Styling */
+
   .logo img {
     height: 87px;
     ;
@@ -26,7 +25,12 @@ body {
     width: auto;
     /* Breite automatisch berechnen */
     object-fit: contain;
-    /* Verhindert Verzerrungen */
+    cursor: pointer; /* Zeigt Hand-Cursor an */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    &:hover {
+        transform: scale(1.1);
+    }
+
   }
 
 
