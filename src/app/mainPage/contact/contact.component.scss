@@ -21,7 +21,7 @@ $checkbox-link-color: #9b59b6;
         flex-wrap: wrap;
         height: auto;
         z-index: 2;
-        margin-top: -68px;
+        margin-top: 26px;
 
         .text {
             flex: 1;
@@ -43,10 +43,31 @@ $checkbox-link-color: #9b59b6;
         }
 
         .formular {
+
+
+
+
             form {
+                position: relative;
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
+
+                .success-message {
+                    left: 30%;
+                    // transform: translate(-50%,-50%);
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 10px;
+                    margin-top: 10px;
+                    border-radius: 5px;
+                    font-size: 16px;
+                    text-align: center;
+                    z-index: 10000;
+                    position: absolute;
+                    bottom: 300px;
+
+                }
 
                 input,
                 textarea {
@@ -62,6 +83,7 @@ $checkbox-link-color: #9b59b6;
                     &:focus {
                         outline: none;
                     }
+
                     &.invalid {
                         border-color: red;
                     }
@@ -96,6 +118,21 @@ $checkbox-link-color: #9b59b6;
                         font-size: 12px;
                         margin-top: 5px;
                     }
+                    .mail{
+          
+
+                        >p{
+                            color: red;
+                           
+                            font-size: 10px
+                            
+                            
+                            
+                        
+                    
+                        }
+                    }
+            
                 }
             }
         }
@@ -105,6 +142,9 @@ $checkbox-link-color: #9b59b6;
     textarea {
         height: 193px;
         resize: none;
+
+       
+        
     }
 
     .checkbox {
@@ -113,6 +153,20 @@ $checkbox-link-color: #9b59b6;
         gap: 10px;
         font-size: 14px;
         line-height: 1.4;
+        .mail{
+          
+
+            >p{
+                color: red;
+               
+                font-size: 10px
+                
+                
+                
+            
+        
+            }
+        }
 
         input {
             margin: 0;
@@ -158,6 +212,7 @@ $checkbox-link-color: #9b59b6;
     }
 
 }
+
 .arrow {
     position: absolute;
     right: 40px;
@@ -178,6 +233,8 @@ $checkbox-link-color: #9b59b6;
         }
     }
 }
+
+
 
 
 
@@ -218,7 +275,7 @@ $checkbox-link-color: #9b59b6;
                 max-width: 500px;
 
                 span {
-                    font-size: 31px;
+                    font-size: 22px;
                     font-weight: bold;
                     display: block;
                     margin-bottom: 20px;
@@ -227,7 +284,7 @@ $checkbox-link-color: #9b59b6;
                 p {
                     margin: 10px 0;
                     line-height: 1.6;
-                    font-size: 20px;
+                    font-size: 17px;
                     font-weight: 400;
                 }
             }
@@ -249,7 +306,7 @@ $checkbox-link-color: #9b59b6;
                         border-radius: 5px;
                         background-color: $background-color;
                         color: $text-color;
-                        font-size: 20px;
+                        font-size: 11px;
 
                         &:focus {
                             outline: none;
@@ -294,7 +351,8 @@ $checkbox-link-color: #9b59b6;
                         border: none;
                         background-color: #b6b6b6;
                         color: $text-color;
-                        font-size: 22px;
+                        font-size: 12px;
+
                         font-weight: 500;
                         cursor: pointer;
                         border-radius: 9px;
@@ -316,7 +374,7 @@ $checkbox-link-color: #9b59b6;
 
                 .arrow {
                     position: absolute;
-                    bottom: -35px;
+                    bottom: 0px;
                     right: 10px;
                     z-index: 10;
 
@@ -469,7 +527,8 @@ $checkbox-link-color: #9b59b6;
 
                 .arrow {
                     position: absolute;
-                    bottom: -60px;
+                    bottom: -26px;
+
                     right: 10px;
                     z-index: 10;
 
@@ -861,7 +920,7 @@ $checkbox-link-color: #9b59b6;
                 form {
                     display: flex;
                     flex-direction: column;
-                    gap: 20px;
+                    gap: 11px;
 
                     input,
                     textarea {
@@ -939,12 +998,12 @@ $checkbox-link-color: #9b59b6;
 
                 .arrow {
                     position: relative;
-                    bottom: 7px;
+                    bottom: 21px;
                     z-index: 10;
                     padding-left: 346px;
 
                     img {
-                        width: 25px;
+                        width: 22px;
                         height: auto;
                         cursor: pointer;
                         transition: transform 0.3s ease;
@@ -998,7 +1057,7 @@ $checkbox-link-color: #9b59b6;
                     font-weight: bold;
                     // display: block;
                     margin-bottom: 20px;
-                    margin-top: 144px;
+                    margin-top: 94px;
                 }
 
                 p {
@@ -1019,7 +1078,7 @@ $checkbox-link-color: #9b59b6;
                 form {
                     display: flex;
                     flex-direction: column;
-                    gap: 20px;
+                    gap: 10px;
 
                     input,
                     textarea {
@@ -1097,12 +1156,12 @@ $checkbox-link-color: #9b59b6;
 
                 .arrow {
                     position: relative;
-                    bottom: 7px;
+                    bottom: 15px;
                     z-index: 10;
                     padding-left: 261px;
 
                     img {
-                        width: 25px;
+                        width: 20px;
                         height: auto;
                         cursor: pointer;
                         transition: transform 0.3s ease;
@@ -1156,8 +1215,7 @@ $checkbox-link-color: #9b59b6;
                     font-weight: bold;
                     display: block;
                     margin-bottom: 20px;
-                    margin-top: 83px;
-                    margin-top: 196px;
+                    margin-top: 94px;
 
                 }
 

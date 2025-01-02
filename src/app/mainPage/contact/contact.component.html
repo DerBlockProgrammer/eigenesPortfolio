@@ -21,6 +21,10 @@
           />
           <span *ngIf="name.invalid && name.touched" class="validation-icon error-icon">!</span>
           <span *ngIf="name.valid && name.touched" class="validation-icon success-icon">✔</span>
+          
+          <span *ngIf="name.invalid && name.touched" class="mail"> <p>Bitte gebe dein Namen ein </span>
+       
+        
         </div>
 
         <div class="form-group">
@@ -37,6 +41,7 @@
           />
           <span *ngIf="email.invalid && email.touched" class="validation-icon error-icon">!</span>
           <span *ngIf="email.valid && email.touched" class="validation-icon success-icon">✔</span>
+          <span *ngIf="email.invalid && email.touched" class="mail"> <p>Bitte gebe deine Email ein</p></span>
         </div>
 
         <div class="form-group">
@@ -51,6 +56,7 @@
           ></textarea>
           <span *ngIf="message.invalid && message.touched" class="validation-icon error-icon">!</span>
           <span *ngIf="message.valid && message.touched" class="validation-icon success-icon">✔</span>
+          <span *ngIf="message.invalid && message.touched" class="mail"> <p>Bitte gib deine Nachricht ein</p> </span>
         </div>
 
         <div class="checkbox">
@@ -65,9 +71,17 @@
           <label for="privacy">
             I’ve read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.
           </label>
+          <span *ngIf="privacy.invalid && privacy.touched" class="mail">
+            <p>Bitte Datenschutzvereinbarung akzeptieren</p>
+          </span>
         </div>
 
         <button type="submit" [disabled]="!contactForm.valid || !contactData.privacy">Send message :)</button>
+
+        <!-- Erfolgsnachricht, wird nur angezeigt, wenn "messageSent" wahr ist -->
+        <div *ngIf="messageSent" class="success-message">
+          Nachricht gesendet!
+        </div>
       </form>
 
       <a href="#arrowUp" class="arrow">

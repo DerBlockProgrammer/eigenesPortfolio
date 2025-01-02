@@ -17,10 +17,12 @@ export class ContactComponent {
     name: "",
     email: "",
     message: "",
-    privacy: false // Zustand der Checkbox
+    privacy: false
   };
 
-  mailTest = false;
+  mailTest = true;
+  messageSent = false; // Neue Variable für den Status der Nachricht
+  privacyError = false; // Fehlerstatus für Datenschutzprüfung
 
   post = {
     endPoint: 'https://marc-vossler.de/sendMail.php',
@@ -39,6 +41,8 @@ export class ContactComponent {
    * @param privacyChecked - Zustand der Datenschutz-Checkbox.
    */
   onSubmit(ngForm: NgForm, privacyChecked: boolean): void {
+    this.privacyError = !privacyChecked; // Setzt den Fehlerstatus basierend auf der Datenschutzprüfung
+
     if (ngForm.form.valid && privacyChecked) {
       this.mailTest ? this.simulateMailSend(ngForm) : this.sendMail(ngForm);
     } else {
@@ -52,6 +56,7 @@ export class ContactComponent {
    */
   private simulateMailSend(ngForm: NgForm): void {
     console.log("Mail gesendet (Simuliert):", this.contactData);
+    this.showSuccessMessage();
     ngForm.resetForm();
   }
 
@@ -62,9 +67,22 @@ export class ContactComponent {
   private sendMail(ngForm: NgForm): void {
     this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
       .subscribe({
-        next: () => ngForm.resetForm(),
+        next: () => {
+          this.showSuccessMessage();
+          ngForm.resetForm();
+        },
         error: (error) => console.error("Fehler beim Senden der Mail:", error),
         complete: () => console.info('E-Mail erfolgreich gesendet'),
       });
+  }
+
+  /**
+   * Zeigt die Erfolgsnachricht und setzt sie nach 3 Sekunden zurück.
+   */
+  private showSuccessMessage(): void {
+    this.messageSent = true;
+    setTimeout(() => {
+      this.messageSent = false; // Nachricht nach 3 Sekunden ausblenden
+    }, 1500); // 3000 ms = 3 Sekunden
   }
 }
