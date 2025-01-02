@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    scroll-behavior: smooth;
+    box-sizing: border-box; /* Verhindert, dass Padding und Border die Gesamtgröße beeinflussen */
+}
+
+html, body {
+    height: 100%; /* Stellt sicher, dass die Seite immer die gesamte Höhe des Bildschirms einnimmt */
+    width: 100%;  /* Stellt sicher, dass die Seite immer die gesamte Breite des Bildschirms einnimmt */
+    overflow: hidden; /* Verhindert, dass Scrollbars erscheinen */
+}
+
+section {
+    height: 100vh; /* Setzt die Höhe jedes Abschnitts auf 100% der Viewport-Höhe */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Zentriert den Inhalt vertikal und horizontal */
+}
+
+.over {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    width: 100%; /* Verhindert, dass der Inhalt die Seite überdehnt */
+}

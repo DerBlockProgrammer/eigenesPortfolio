@@ -21,9 +21,15 @@
             cursor: pointer;
             /* Zeigt Hand-Cursor an */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+
             &:hover {
                 transform: scale(1.1);
             }
+
+            >p{
+                font-size: 10px;
+            }
+         
         }
 
 
@@ -31,6 +37,32 @@
             font-size: 12px;
             text-align: center;
             color: #b6b6b6;
+
+            .impressum {}
+
+            >p {
+                font-size: 16px;
+            }
+
+            .impressum:hover {
+                cursor: pointer;
+                color: #7dff63;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .data {
+                display: flex;
+                gap: 14px;
+            }
+
+            .Policy {
+                
+            }
+            .Policy:hover {
+                cursor: pointer;
+                color: #7dff63;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
         }
 
         .footer-icons {
