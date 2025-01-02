@@ -9,9 +9,8 @@ $checkbox-link-color: #9b59b6;
     justify-content: center;
     align-items: center;
     background-color: #141d2f;
-    padding: 50px;
     color: white;
-    height: 66vh;
+  
 
     .contact {
         display: flex;
@@ -19,9 +18,9 @@ $checkbox-link-color: #9b59b6;
         max-width: 1200px;
         width: 100%;
         flex-wrap: wrap;
-        height: auto;
         z-index: 2;
-        margin-top: 26px;
+        padding: 20px;
+    
 
         .text {
             flex: 1;
@@ -31,7 +30,6 @@ $checkbox-link-color: #9b59b6;
                 font-size: 32px;
                 font-weight: bold;
                 display: block;
-                margin-bottom: 20px;
             }
 
             p {
@@ -95,6 +93,7 @@ $checkbox-link-color: #9b59b6;
 
                 .form-group {
                     position: relative;
+                    padding-bottom: 17px;
 
                     .validation-icon {
                         position: absolute;
@@ -118,21 +117,23 @@ $checkbox-link-color: #9b59b6;
                         font-size: 12px;
                         margin-top: 5px;
                     }
-                    .mail{
-          
 
-                        >p{
+                    .mail {
+
+
+                        >p {
                             color: red;
-                           
-                            font-size: 10px
-                            
-                            
-                            
-                        
-                    
+                            font-size: 10px;
+                            position: absolute;
+                            bottom: 0;
+
+
+
+
+
                         }
                     }
-            
+
                 }
             }
         }
@@ -143,8 +144,8 @@ $checkbox-link-color: #9b59b6;
         height: 193px;
         resize: none;
 
-       
-        
+
+
     }
 
     .checkbox {
@@ -153,18 +154,14 @@ $checkbox-link-color: #9b59b6;
         gap: 10px;
         font-size: 14px;
         line-height: 1.4;
-        .mail{
-          
 
-            >p{
+        .mail {
+
+
+            >p {
                 color: red;
-               
-                font-size: 10px
-                
-                
-                
-            
-        
+                font-size: 10px;
+                    position: absolute;
             }
         }
 
@@ -215,12 +212,11 @@ $checkbox-link-color: #9b59b6;
 
 .arrow {
     position: absolute;
-    right: 40px;
+    right: 10px;
     z-index: 10;
 
     img {
         width: 25px;
-        height: auto;
         cursor: pointer;
         transition: transform 0.3s ease, border-color 0.3s ease;
         border: 1px solid white; // Standardfarbe für den Border ist Weiß
@@ -244,8 +240,8 @@ $checkbox-link-color: #9b59b6;
     height: 63vh;
 
     >img {
-        height: 100%;
-        width: 53vh;
+        height: 118%;
+        width: 93vh;
     }
 }
 
@@ -256,9 +252,8 @@ $checkbox-link-color: #9b59b6;
         justify-content: center;
         align-items: center;
         background-color: #141d2f;
-        padding: 50px;
         color: white;
-        height: 53vh;
+      
 
         .contact {
             display: flex;
@@ -266,7 +261,7 @@ $checkbox-link-color: #9b59b6;
             max-width: 1200px;
             width: 100%;
             flex-wrap: wrap;
-            height: 402px;
+      
 
             z-index: 2;
 
@@ -278,7 +273,6 @@ $checkbox-link-color: #9b59b6;
                     font-size: 22px;
                     font-weight: bold;
                     display: block;
-                    margin-bottom: 20px;
                 }
 
                 p {
@@ -297,7 +291,7 @@ $checkbox-link-color: #9b59b6;
                 form {
                     display: flex;
                     flex-direction: column;
-                    gap: 20px;
+                    gap: 9px;
 
                     input,
                     textarea {
@@ -380,7 +374,6 @@ $checkbox-link-color: #9b59b6;
 
                     img {
                         width: 25px;
-                        height: auto;
                         cursor: pointer;
                         transition: transform 0.3s ease;
 
@@ -411,9 +404,7 @@ $checkbox-link-color: #9b59b6;
         justify-content: center;
         align-items: center;
         background-color: #141d2f;
-        padding: 50px;
         color: white;
-        height: 66vh;
 
         .contact {
             display: flex;
@@ -421,7 +412,6 @@ $checkbox-link-color: #9b59b6;
             max-width: 1200px;
             width: 100%;
             flex-wrap: wrap;
-            height: auto;
             z-index: 2;
 
             .text {
@@ -432,7 +422,6 @@ $checkbox-link-color: #9b59b6;
                     font-size: 20px;
                     font-weight: bold;
                     display: block;
-                    margin-bottom: 20px;
                 }
 
                 p {
@@ -534,7 +523,6 @@ $checkbox-link-color: #9b59b6;
 
                     img {
                         width: 25px;
-                        height: auto;
                         cursor: pointer;
                         transition: transform 0.3s ease;
 
@@ -567,9 +555,7 @@ $checkbox-link-color: #9b59b6;
         justify-content: center;
         align-items: center;
         background-color: #141d2f;
-        padding: 50px;
         color: white;
-        height: 66vh;
 
         .contact {
             display: flex;
@@ -577,7 +563,6 @@ $checkbox-link-color: #9b59b6;
             max-width: 1200px;
             width: 100%;
             flex-wrap: wrap;
-            height: auto;
             z-index: 2;
 
             .text {
@@ -588,7 +573,6 @@ $checkbox-link-color: #9b59b6;
                     font-size: 18px;
                     font-weight: bold;
                     display: block;
-                    margin-bottom: 20px;
                 }
 
                 p {
@@ -689,7 +673,6 @@ $checkbox-link-color: #9b59b6;
 
                     img {
                         width: 25px;
-                        height: auto;
                         cursor: pointer;
                         transition: transform 0.3s ease;
 
@@ -721,9 +704,7 @@ $checkbox-link-color: #9b59b6;
         justify-content: center;
         align-items: center;
         background-color: #141d2f;
-        padding: 50px;
         color: white;
-        height: 66vh;
 
         .contact {
             display: flex;
@@ -731,7 +712,6 @@ $checkbox-link-color: #9b59b6;
             max-width: 1200px;
             width: 100%;
             flex-wrap: wrap;
-            height: auto;
             z-index: 2;
 
             .text {
@@ -742,7 +722,6 @@ $checkbox-link-color: #9b59b6;
                     font-size: 18px;
                     font-weight: bold;
                     display: block;
-                    margin-bottom: 20px;
                 }
 
                 p {
@@ -843,7 +822,6 @@ $checkbox-link-color: #9b59b6;
 
                     img {
                         width: 25px;
-                        height: auto;
                         cursor: pointer;
                         transition: transform 0.3s ease;
 
@@ -877,9 +855,7 @@ $checkbox-link-color: #9b59b6;
         justify-content: center;
         align-items: center;
         background-color: #141d2f;
-        padding: 50px;
         color: white;
-        height: 66vh;
 
         .contact {
             display: flex;
@@ -887,7 +863,6 @@ $checkbox-link-color: #9b59b6;
             max-width: 1200px;
             width: 100%;
             flex-wrap: wrap;
-            height: auto;
             z-index: 2;
 
             .text {
@@ -897,9 +872,7 @@ $checkbox-link-color: #9b59b6;
                 span {
                     font-size: 18px;
                     font-weight: bold;
-                    // display: block;
-                    margin-bottom: 20px;
-                    margin-top: 144px;
+              
                 }
 
                 p {
@@ -997,14 +970,15 @@ $checkbox-link-color: #9b59b6;
                 }
 
                 .arrow {
-                    position: relative;
-                    bottom: 21px;
+                    position: absolute;
+                    display: block;
+                    bottom: -77px;
                     z-index: 10;
+                    right: 0;
                     padding-left: 346px;
 
                     img {
                         width: 22px;
-                        height: auto;
                         cursor: pointer;
                         transition: transform 0.3s ease;
 
@@ -1035,9 +1009,7 @@ $checkbox-link-color: #9b59b6;
         justify-content: center;
         align-items: center;
         background-color: #141d2f;
-        padding: 50px;
         color: white;
-        height: 66vh;
 
         .contact {
             display: flex;
@@ -1045,7 +1017,6 @@ $checkbox-link-color: #9b59b6;
             max-width: 1200px;
             width: 100%;
             flex-wrap: wrap;
-            height: auto;
             z-index: 2;
 
             .text {
@@ -1056,8 +1027,7 @@ $checkbox-link-color: #9b59b6;
                     font-size: 18px;
                     font-weight: bold;
                     // display: block;
-                    margin-bottom: 20px;
-                    margin-top: 94px;
+                
                 }
 
                 p {
@@ -1155,14 +1125,14 @@ $checkbox-link-color: #9b59b6;
                 }
 
                 .arrow {
-                    position: relative;
-                    bottom: 15px;
+                    position: absolute;
+                 
+
                     z-index: 10;
-                    padding-left: 261px;
+               
 
                     img {
                         width: 20px;
-                        height: auto;
                         cursor: pointer;
                         transition: transform 0.3s ease;
 
@@ -1187,15 +1157,13 @@ $checkbox-link-color: #9b59b6;
     }
 }
 
-@media(max-width:352px) {
+@media(max-width:395px) {
     .contactDiv {
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: #141d2f;
-        padding: 50px;
         color: white;
-        height: 66vh;
 
         .contact {
             display: flex;
@@ -1203,7 +1171,6 @@ $checkbox-link-color: #9b59b6;
             max-width: 1200px;
             width: 100%;
             flex-wrap: wrap;
-            height: auto;
             z-index: 2;
 
             .text {
@@ -1214,8 +1181,7 @@ $checkbox-link-color: #9b59b6;
                     font-size: 18px;
                     font-weight: bold;
                     display: block;
-                    margin-bottom: 20px;
-                    margin-top: 94px;
+        
 
                 }
 
@@ -1231,13 +1197,58 @@ $checkbox-link-color: #9b59b6;
 
             .formular {
                 flex: 1;
-                max-width: 200px;
                 position: relative;
+                .form-group {
+                    position: relative;
+                    padding-bottom: 17px;
+
+                    .validation-icon {
+                        position: absolute;
+                        top: 50%;
+                        right: 10px;
+                        transform: translateY(-50%);
+                        font-size: 18px;
+                        font-weight: bold;
+
+                        &.error-icon {
+                            color: red;
+                        }
+
+                        &.success-icon {
+                            color: #70e61c;
+                        }
+                    }
+
+                    .error-text {
+                        color: red;
+                        font-size: 12px;
+                        margin-top: 5px;
+                    }
+
+                    .mail {
+
+
+                        >p {
+                            color: red;
+                            font-size: 10px;
+                            position: absolute;
+                            bottom: 0;
+
+
+
+
+
+                        }
+                    }
+
+                }
 
                 form {
                     display: flex;
                     flex-direction: column;
                     gap: 5px;
+
+                    
 
                     input,
                     textarea {
@@ -1310,6 +1321,7 @@ $checkbox-link-color: #9b59b6;
                     }
 
                 }
+                
 
                 .arrow {
                     position: relative;
@@ -1320,7 +1332,6 @@ $checkbox-link-color: #9b59b6;
 
                     img {
                         width: 20px;
-                        height: auto;
                         cursor: pointer;
                         transition: transform 0.3s ease;
 
@@ -1329,6 +1340,7 @@ $checkbox-link-color: #9b59b6;
                         }
                     }
                 }
+                
             }
         }
 
