@@ -68,8 +68,8 @@ body {
   /* Dropdown-Menü */
   .mobile-menu {
     display: none;
-    /* Standardmäßig versteckt */
-    background-color: #141D2F;
+    background-color: rgba(20, 29, 47, 0.5);
+    transition: background-color 0.3s ease;
     position: absolute;
     top: 60px;
     right: 0;
@@ -113,5 +113,9 @@ body {
       height: 51px;
       /* Kleinere Logo-Größe für mobile Bildschirme */
     }
+   
+  }
+  .mobile-menu {
+ 
   }
 }
