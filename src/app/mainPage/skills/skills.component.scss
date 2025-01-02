@@ -242,7 +242,7 @@
             }
 
             p {
-                font-size: 19px;
+                font-size: 14px;
                 line-height: 1.4;
                 margin: 5px 0; // Gleichmäßiger Abstand zwischen Zeilen
 
@@ -257,10 +257,14 @@
         }
 
         .skills-grid2 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); // Icons in 3 Spalten
-            gap: 0px;
-            margin-top: 20px;
+            display: grid
+            ;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 0px;
+                    margin-top: 20px;
+                    position: relative;
+            
+                
 
             .skill {
                 display: flex;
