@@ -859,6 +859,7 @@ $checkbox-link-color: #9b59b6;
 
         .contact {
             display: flex;
+            flex-direction: column;
             gap: 35px;
             max-width: 1200px;
             width: 100%;
@@ -970,12 +971,13 @@ $checkbox-link-color: #9b59b6;
                 }
 
                 .arrow {
+                
                     position: absolute;
-                    display: block;
+            
+  
                     bottom: -77px;
                     z-index: 10;
                     right: 0;
-                    padding-left: 346px;
 
                     img {
                         width: 22px;
@@ -1324,11 +1326,11 @@ $checkbox-link-color: #9b59b6;
                 
 
                 .arrow {
-                    position: relative;
-                    bottom: 44px;
+                    position: absolute;
+                    bottom: 20px;
 
                     z-index: 10;
-                    padding-left: 232px;
+           
 
                     img {
                         width: 20px;
