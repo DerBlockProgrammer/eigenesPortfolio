@@ -17,6 +17,7 @@ export class ContactComponent {
     name: "",
     email: "",
     message: "",
+    privacy: false // Zustand der Checkbox
   };
 
   mailTest = false;
@@ -33,12 +34,15 @@ export class ContactComponent {
   };
 
   /**
-   * Verarbeitet das Formular und sendet die Daten, falls sie gültig sind.
+   * Verarbeitet das Formular und sendet die Daten, falls sie gültig sind und das Datenschutzfeld angekreuzt wurde.
    * @param ngForm - Die Angular Formulardaten.
+   * @param privacyChecked - Zustand der Datenschutz-Checkbox.
    */
-  onSubmit(ngForm: NgForm): void {
-    if (ngForm.form.valid) {
+  onSubmit(ngForm: NgForm, privacyChecked: boolean): void {
+    if (ngForm.form.valid && privacyChecked) {
       this.mailTest ? this.simulateMailSend(ngForm) : this.sendMail(ngForm);
+    } else {
+      alert("Bitte füllen Sie alle Felder aus und stimmen Sie der Datenschutzerklärung zu.");
     }
   }
 
@@ -53,7 +57,7 @@ export class ContactComponent {
 
   /**
    * Sendet die E-Mail-Daten an den angegebenen Endpunkt.
-   * @param ngForm 
+   * @param ngForm - Die Angular Formulardaten.
    */
   private sendMail(ngForm: NgForm): void {
     this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
